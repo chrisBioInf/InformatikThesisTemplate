@@ -1,0 +1,99 @@
+% Appendix B
+
+\chapter{LaTeX Commands in the Class}%  % Just don't use \LaTeX in a caption..
+\label{AppendixB}
+
+\section{Preamble Commands}
+
+\noindent
+\begin{tabularx}{\linewidth}{l X l}
+    \toprule
+    \tblhead{Command} & \tblhead{Description} & \tblhead{Reference}\\
+    \midrule
+    \verb|\addglobalbib|&Add a bib file&\autoref{sec:bib}\\
+    \verb|\addSymbolCategory|&Add a Symbol category.&\autoref{sec:sym}\\
+    \verb|\documentclass|&Load the document class.&\autoref{sec:main}\\
+    \verb|\setauthor|&The full name of the author.&\autoref{opt:bib}\\
+    \verb|\setauthortitle|&The academic degree if the author.&\autoref{opt:bib}\\
+    \verb|\setbase|&Set publications the thesis is based on.&\autoref{sub:baseon}\\
+    \verb|\setbirthplace|&The birth place of the author.&\autoref{opt:bib}\\
+    \verb|\setdayofbirth|&The day of birth of the author.&\autoref{opt:bib}\\
+    \verb|\setdayofdefens|&The day where you defended your thesis.&\autoref{opt:bib}\\
+    \verb|\setdedication|&Set the dedication the thesis (if any).&\autoref{cmd:dedicate}\\
+    \verb|\setfilingdate|&The date where you submit your thesis.&\autoref{opt:bib}\\
+    \verb|\setfirstreviewer|&The first reviewer of your thesis.&\autoref{opt:bib}\\
+    \verb|\setgrade|&The grade that you get on your thesis.&\autoref{opt:bib}\\
+    \verb|\setkeywords|&Set keywords for the content of your thesis.&\autoref{cmd:dedicate}\\
+    \verb|\setpublist|&Set publications for the list of your scientific publications.&\autoref{sub:baseon}\\
+    \verb|\setsecondreviewer|&The second reviewer of you thesis.&\autoref{opt:bib}\\
+    \verb|\setsubtitle|&The subtitle of the thesis.&\autoref{opt:bib}\\
+    \verb|\settitle|&The title of the thesis.&\autoref{opt:bib}\\
+  \bottomrule
+\end{tabularx}
+
+\clearpage
+\section{Commands}
+
+\noindent
+\begin{tabularx}{\linewidth}{l X l}
+    \toprule
+    \tblhead{Command} & \tblhead{Description} & \tblhead{Reference}\\
+    \midrule
+    \verb|\abb|&Place a abbreviation&\autoref{sec:abb}\\
+    \verb|\abbs|&Place the plural of an abbreviation&\autoref{sec:abb}\\
+    \verb|\autoref|&Reference to a label and add corresponding type of the reference&\autoref{cmd:ref}\\
+    \verb|\beginappendix|&Begin the appendix&\autoref{sub:body}\\
+    \verb|\beginmainmatter|&Begin the main matter&\autoref{sub:body}\\
+    \verb|\bull|&Add new bullet point to a cs entry&\autoref{sec:cs}\\
+    \verb|\caption|&Add a caption&\autoref{sub:cap}\\
+    \verb|\captiont|&Add a caption with a title&\autoref{sub:cap}\\
+    \verb|\chapter|&Start a new chapter&\autoref{sec:chapter}\\
+    \verb|\citet|&Cite a bib entry in the text&\autoref{sec:cite}\\
+    \verb|\citep|&Cite a bib entry in the parentheses&\autoref{sec:cite}\\
+    \verb|\csentry|&Add a entry to the cs&\autoref{sec:cs}\\
+    \verb|\defabb|&Define a abbreviation&\autoref{sec:abb}\\
+    \verb|\include|&Include an other file&\autoref{sub:body}\\
+    \verb|\indexbf|&Create index entry and bold text&\autoref{cmd:defindex}\\
+    \verb|\indexdef|&Create index entry and margin note&\autoref{cmd:defindex}\\
+    \verb|\indexnomn|&Create index entry&\autoref{cmd:defindex}\\
+    \verb|\label|&Create a label that can be referred to&\autoref{cmd:ref}\\
+    \verb|\macrosym|&Creates a macro and add it as symbol&\autoref{sec:sym}\\
+    \verb|\makefrontmatter|&Creates the front matter of the thesis&\autoref{sub:body}\\
+    \verb|\makebackmatter|&Creates the back matter of the thesis&\autoref{sub:body}\\
+    \verb|\marginnote|&Add a margin note&\autoref{cmd:margin}\\
+    \verb|\operatorsym|&Add a operator symbol&\autoref{sec:sym}\\
+    \verb|\part|&Start a new part&\autoref{cmd:part}\\
+    \verb|\ref|&Reference to a label&\autoref{cmd:ref}\\
+    \verb|\section|&Start a new section&-\\
+    \verb|\subsection|&Start a new subsection&-\\
+    \verb|\sym|&Add a symbol&\autoref{sec:sym}\\
+    \verb|\todo|&Add a todo note&\autoref{sec:todo}\\
+    \bottomrule
+\end{tabularx}
+
+\clearpage
+\section{Environments}
+
+\noindent
+\begin{tabularx}{\linewidth}{l X l}
+    \toprule
+    \tblhead{Environment} & \tblhead{Description} & \tblhead{Reference}\\
+    \midrule
+    \verb|algorithm|&A algorithm float&\autoref{sec:code}\\
+    \verb|algorithmic|&A code pseudo code environment&\autoref{sec:code}\\
+    \verb|code|&A code highlighting environment&\autoref{sec:code}\\
+    \verb|corollary|&A corollary environment&\autoref{sec:theo}\\
+    \verb|cscategory|&A new category for cs&\autoref{sec:cs}\\
+    \verb|definition|&A definition environment&\autoref{sec:theo}\\
+    \verb|figure|&A figure&\autoref{sec:float}\\
+    \verb|lemma|&A lemma environment&\autoref{sec:theo}\\
+    \verb|proof|&A proof environment&\autoref{sec:theo}\\
+    \verb|proposition|&A proposition environment&\autoref{sec:theo}\\
+    \verb|SCfigure|&A figure with caption on the side&\autoref{sec:float}\\
+    \verb|SCtable|&A table with caption on the side&\autoref{sec:float}\\
+    \verb|table|&A table&\autoref{sec:float}\\
+    \verb|theorem|&A theorem environment&\autoref{sec:theo}\\
+    \bottomrule
+\end{tabularx}
+
+% End of appendices/appendix_B.tex

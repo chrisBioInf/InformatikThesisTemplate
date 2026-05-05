@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+See Figure\PYGZti{}\PYG{k}{\PYGZbs{}ref}\PYG{n+nb}{\PYGZob{}}fig:veelo\PYG{n+nb}{\PYGZcb{}}.
+See \PYG{k}{\PYGZbs{}autoref}\PYG{n+nb}{\PYGZob{}}fig:veelo\PYG{n+nb}{\PYGZcb{}}.
+\end{MintedVerbatim}

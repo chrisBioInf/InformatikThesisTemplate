@@ -1,0 +1,232 @@
+% Chapter 4
+
+\chapter{Back Matter}%
+\label{Chapter4}
+
+\section{Appendix}%
+\label{sec:app}
+
+There may be more than one appendix. Each appendix should be
+thematically consistent. As an example, you could have one appendix for extra
+tables and one for pseudocode. However, it directly depends on your topic and
+how you present it. Still, the appendix should not be entirely unlinked to the
+main text. A small mention like \quo{more data in Appendix X} is sufficient to
+justify an appendix.
+
+Every appendix starts with a \verb|\chapter| command. This command behaves
+differently in the appendix than in the main text. The numbering uses letters
+instead of numbers. Furthermore, the mini \abb{ToC} is not present here.
+Generally, the formatting of such an appendix can be done more freely than in
+the main text.  For example, one appendix could entirely consist of tables
+without any text except for the captions.
+
+\section{Lists of X}%
+\label{opt:list}
+
+There are four \quo{List of X} entries in the back matter. The first two are
+abbreviations and symbols. More details on both can be found in
+\autoref{sec:abb} and \autoref{sec:sym}.
+
+The other two are figures and tables. Both are in some way standard in a
+thesis.  However, the real usage of them is small. Do you know someone that
+ever looked for a specific table or figure in these lists? So these two lists
+are per default not present in the back matter. However, if you still want to
+include them in the thesis, use the class options
+\clsopt{figlist}\indexdef{figlist} (for figures) and
+\clsopt{tablist} (for tables) \indexdef{tablist}.
+
+\section{Bibliography}%
+\label{sec:bib}
+
+The bibliography is created from one BibTeX file. This file is given in the
+preamble by the command \verb!\addglobalbib!. It can be changed to anything
+else. In fact, the bibliography is created with biblatex, which also accepts
+other input formats than BibTeX. For an overview look at \citet{web:biblatex}.
+
+The use of \pkg{biblatex} means that the bibliography is not created with
+\prog{BibTeX} but with \prog{Biber}. This tool should be contained in any
+reasonably modern \LaTeX{} distribution. However, many editors do not use it
+as default so you may need to change the configuration there.
+
+The bibliography displays only those entries that are cited at some point in
+the thesis (see \autoref{sec:cite}).  With respect to the base on publications
+(see \autoref{sub:baseon}), it may be required to have some works in the file
+that are not cited anywhere. Note that the bibliography is created for the
+main text and the appendix, so by default all citations must be contained in
+this single file. You can, however, include other bib files by adding more
+\verb!\addglobalbib!  commands to the main \LaTeX{} file.
+
+By default, the first names are shortened to the first letter. This behavior
+can be changed with the class command
+\clsopt{fullcitename}\indexdef{fullcitename}. When you use this command, the
+result is that the full first names are shown in all citations. Note that in
+many cases the downloadable \prog{BibTeX} files only contains the shorted
+first name.  When some of the citations use shortened and some complete names,
+the result will be an inconsistent look. To prevent this, use the command only
+when all you BibTeX entries have full first names.
+
+\subsection{BibTex}%
+\label{sub:bibtex}
+
+Even though BibLaTeX is more powerful than BibTex, there may be situations
+where you want to use BibTex instead, e.\,g.\ if Biber is not available. For
+this case, the class option \clsopt{bibtex} can be used.\indexdef{bibtex}
+BibTex keeps more or less all features intact. The style of the bibliography
+changes a little and the overall look is less pleasant.  The same holds for
+the cite commands. Thus, I clearly recommend to use BibLaTeX. If you still
+want to use BibTex, you must also adapt the latexmkrc file to properly
+configure latexmk for using BibTex.  Be aware that author style and
+annotations also does not work with BibTex.
+
+\subsection{Author Style}%
+\label{sub:author}
+
+The author style is the way how BibLaTeX shows the author name in the
+bibliography. This is set with the class option
+\clsopt{bibauthorstyle}\indexdef{bibauthorstyle}.  There are basically two
+options: first the given name, then the family name (\cmd{gf}); or first
+the family name, then a comma, and then the given name (\cmd{fg}).
+
+More natural is to have the given name shown first. However, this can be
+disturbing when the  bibliography is sorted after the family names. Thus, your
+brain may have a hard time to figure out where in the sorting you are. A
+possible solution is a mixed version of the style. This third possibility is
+to have the first author in \cmd{fg} order and all other authors in
+\cmd{gf} order (\cmd{fggf}).
+
+You can use any of the three bold strings to both authorstyle class options.
+The based on bibliography (\clsopt{baseonauthorstyle}) uses the \cmd{gf}
+order by default because the ordering of the papers in this smaller list is
+not so important. The main bibliography (\clsopt{bibauthorstyle}) uses the
+\clsopt{fggf} order such that most authors can easily be read but the ordering
+of the bibliography can also easily be followed.
+
+\subsection{BibLaTeX Annotations}%
+\label{sub:annotation}
+
+BibLaTeX has the possibility to add annotations to a bib entry. These
+annotations must then be interpreted from the class. This thesis template
+interprets three different author annotations. These are the
+\cmd{underlinebase}, \cmd{underlineall}, and \cmd{firstauthor}.
+
+\begin{algorithm}
+    \caption{An example how to use author annotations.}%
+    \label{alg:annotations}
+    \begin{code}{latex}
+@article{van2000art,
+    title={The art of writing a scientific article},
+    author={Van der Geer, J and Hanraads, JAJ and Lupton, RA},
+    AUTHOR+an = {1=underlinebase,firstauthor;2=firstauthor},
+    journal={J. Sci. Commun},
+    volume={163},
+    number={2},
+    pages={51--59},
+    year={2000},
+}
+@misc{web:promotion2,
+    author = "{Fakultät für Mathematik und Informatik}",
+    AUTHOR+an = {1=underlineall},
+    title = "Erste Änderungssatzung zur Promotionsordnung Fakultät für
+              Mathematik und Informatik",
+    year = "2017",
+    howpublished = "\url{http://db.uni-leipzig.de/bekanntmachung/
+                          dokudownload.php?dok_id=5033}",
+    note = "[Online; accessed 27-August-2018]",
+}
+    \end{code}
+\end{algorithm}
+
+
+First, it is important to know how author annotations are added. This is done
+with an extra field, the \cmd{AUTHOR+an} field. Examples can be seen in
+\autoref{alg:annotations}. The content of the field is a list of entries that
+address the list of authors. Thus, every item in the list starts with an
+author position (starting with 1). Then follows a \quo{=} and the actual
+annotations, each separated by a \quo{,}. The list items are then separated with
+a \quo{;}.
+
+As an example, this field: \\
+\verb|AUTHOR+an = {1=underlinebase,firstauthor;2=firstauthor}|\\
+means that the first author is annotated with \cmd{underlinebase} and
+\cmd{firstauthor}. The second author is annotated with
+\cmd{firstauthor}. Not every position has to be annotated. Thus,
+the field \\\verb|AUTHOR+an = {3=underlinebase}|\\ would also be valid.
+
+Now to the meaning of annotations. The \cmd{underlinebase} and the
+\cmd{underlineall} annotations do more or less the same thing. They
+underline the author name. A convenient way to use this is to underline your
+own name in every paper. This makes it easy for the reader to recognize your
+work. The difference between these two commands is that \cmd{underlinebase}
+only underlines the name in the \quo{based on} bibliography (see
+\autoref{sub:baseon}) and \cmd{underlineall} also underlines it in the main
+bibliography. You may choose the preferred style according to your taste.
+Underlining in the based on bibliography is always a good idea. In the main
+bibliography, the underlined references may be a little lost in all the other
+ones that are not from you.  However, if you cite many papers that you have
+done some work for but the thesis is not based on them, it could help to show
+all the work you have done.
+
+The \cmd{firstauthor} annotation is used to mark authors that share the
+first authorship of a paper. In the main bibliography, this gives no extra
+information that helps finding the work. However, in the based on
+bibliography, the situation is different. Maybe you share the first authorship
+of a paper, but you are not at the first position. Then you can use this to
+make clear that this work is really from you. Thus, the annotation only
+effects the based on bibliography. Furthermore, note that this annotation only
+makes sense when more than one author is marked. In papers where only one
+first author exists, the annotation shall not be used.
+
+\section{Curriculum Scientiae}%
+\label{sec:cs}
+
+The Promotionsordung \citep{web:promotion} requires you to hand in a
+curriculum scientiae with you work.  This is a curriculum vitae with a focus
+on your scientific work. It is not stated how you hand it in but it makes
+sense to make it a part of your thesis. To make it an extra file, some extra
+commands are provided by the class.
+
+The first one is the \verb!cscategory! environment. This gives you the
+environment where you can put \verb!\csentry! in. For every topic (Education,
+Working Experience, IT Knowledge and so on), a new \verb!cscategory!
+environment is created. Thus, the title of the topic is given as an argument to
+the \verb!\begin{cscategory}{title}! command. Internally, the environment
+creates a tabular environment such that a \verb!cscategory! must be complete
+on one page.  However, this can be composited by breaking one category
+manually in parts. The second part should have a \quo{(continued)} (or
+\quo{(ctd.)} for short) in the title.
+
+The \verb!\csentry{left}{right}[secondline]! command has as a first argument a
+text that is positioned left on the page. This could be a date of an
+employment or a subcategory. The second one is then the text that is placed
+right on the page.  This is could be a job description or some skills. When
+one line is not enough to describe the entry, there is an optional third
+argument that creates a second line on the right.
+
+In case you want to create sub-entries for an entry, such as a grade for an
+education or a project of an employment, this can be done with the command
+\verb|\bull|. This command is used in the second or third argument of the
+\verb!\csentry! command. An example of the complete example is given in
+\autoref{alg:cs}.
+
+\begin{algorithm}
+    \caption{An example how a curriculum scientiae is created.}%
+    \label{alg:cs}
+    \begin{code}{latex}
+\begin{cscategory}{Working Experience}
+    \csentry{since 10/2018}{Tutor}[
+        Institute for Computer Science, Leipzig University
+        \bull{} Lecture: Algorithms and Data Structures
+    ]
+\end{cscategory}
+    \end{code}
+\end{algorithm}
+
+\section{Selbstständigkeitserklärung (Statement of Authorship)}
+The last thing that is required by the Promotionsordung~\citep{web:promotion}
+is that you sign a Statement of Authorship. This is the last page of your
+thesis.  It basically says that you have done no plagiarism.
+
+There are two lines. The first one is for the location and date where you
+signed it. The second one is for your signature.
+
+% End of chapters/chapter_4.tex

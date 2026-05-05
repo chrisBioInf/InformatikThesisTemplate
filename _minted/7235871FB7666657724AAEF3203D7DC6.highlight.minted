@@ -1,0 +1,10 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}algorithm\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}\PYG{c}{\PYGZpc{}}
+        Example of an \PYG{k}{\PYGZbs{}cmd}\PYG{n+nb}{\PYGZob{}}algorithm\PYG{n+nb}{\PYGZcb{}} float enclosing a
+        \PYG{k}{\PYGZbs{}cmd}\PYG{n+nb}{\PYGZob{}}code\PYG{n+nb}{\PYGZcb{}} environment to display its own code.
+     \PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}alg:algo\PYG{n+nb}{\PYGZcb{}}
+    *code environment*
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}algorithm\PYG{n+nb}{\PYGZcb{}}
+\end{MintedVerbatim}

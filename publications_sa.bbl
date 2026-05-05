@@ -1,0 +1,213 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{web:promotion2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e8ae55d6b446f84280a2e37ad8b720df}{%
+           family={{Fakultät für Mathematik und Informatik}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{e8ae55d6b446f84280a2e37ad8b720df}
+      \strng{fullhash}{e8ae55d6b446f84280a2e37ad8b720df}
+      \strng{fullhashraw}{e8ae55d6b446f84280a2e37ad8b720df}
+      \strng{bibnamehash}{e8ae55d6b446f84280a2e37ad8b720df}
+      \strng{authorbibnamehash}{e8ae55d6b446f84280a2e37ad8b720df}
+      \strng{authornamehash}{e8ae55d6b446f84280a2e37ad8b720df}
+      \strng{authorfullhash}{e8ae55d6b446f84280a2e37ad8b720df}
+      \strng{authorfullhashraw}{e8ae55d6b446f84280a2e37ad8b720df}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://db.uni-leipzig.de/bekanntmachung/dokudownload.php?dok_id=5033}}
+      \field{note}{[Online; accessed 26-August-2018]}
+      \field{title}{Erste Änderungssatzung zur Promotionsordnung Fakultät für Mathematik und Informatik}
+      \field{year}{2017}
+      \true{nocite}
+      \annotation{item}{author}{default}{1}{}{0}{underlineall}
+    \endentry
+    \entry{web:biblatex}{online}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=97afecc8539f253db93a1c737d62212c}{%
+           family={Lehman},
+           familyi={L\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=518f52ea2d73db1cfac0095db0482363}{%
+           family={Kime},
+           familyi={K\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e1cc18b9b6d3955ba487be6c20e4d7db}{%
+           family={Wemheuer},
+           familyi={W\bibinitperiod},
+           given={Moritz},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f551f4df6b727289e225343a679ca7ab}{%
+           family={Boruvka},
+           familyi={B\bibinitperiod},
+           given={Audrey},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=93c71fed62527d4c8c6ae13ee771fcdd}{%
+           family={Wright},
+           familyi={W\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{34e4cbaf0989c9ce668a625f61e8360c}
+      \strng{fullhash}{661c56e3bb17dc444ea939264f83c2a3}
+      \strng{fullhashraw}{661c56e3bb17dc444ea939264f83c2a3}
+      \strng{bibnamehash}{661c56e3bb17dc444ea939264f83c2a3}
+      \strng{authorbibnamehash}{661c56e3bb17dc444ea939264f83c2a3}
+      \strng{authornamehash}{34e4cbaf0989c9ce668a625f61e8360c}
+      \strng{authorfullhash}{661c56e3bb17dc444ea939264f83c2a3}
+      \strng{authorfullhashraw}{661c56e3bb17dc444ea939264f83c2a3}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://packages.oth-regensburg.de/ctan/macros/latex/contrib/biblatex/doc/biblatex.pdf}}
+      \field{note}{[Online; accessed 10-September-2018]}
+      \field{title}{The biblatex Package; Programmable Bibliographies and Citations;Version 3.11}
+      \field{year}{2018}
+      \true{nocite}
+    \endentry
+    \entry{web:promotion}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ae08532fe464a854f2251c08baef58fe}{%
+           family={Mathematik\bibnamedelimb und\bibnamedelima Informatik},
+           familyi={M\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={Fakultät},
+           giveni={F\bibinitperiod},
+           givenun=0,
+           prefix={für},
+           prefixi={f\bibinitperiod},
+           prefixun=0}}%
+      }
+      \strng{namehash}{ae08532fe464a854f2251c08baef58fe}
+      \strng{fullhash}{ae08532fe464a854f2251c08baef58fe}
+      \strng{fullhashraw}{ae08532fe464a854f2251c08baef58fe}
+      \strng{bibnamehash}{ae08532fe464a854f2251c08baef58fe}
+      \strng{authorbibnamehash}{ae08532fe464a854f2251c08baef58fe}
+      \strng{authornamehash}{ae08532fe464a854f2251c08baef58fe}
+      \strng{authorfullhash}{ae08532fe464a854f2251c08baef58fe}
+      \strng{authorfullhashraw}{ae08532fe464a854f2251c08baef58fe}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://db.uni-leipzig.de/bekanntmachung/dokudownload.php?dok_id=3631}}
+      \field{note}{[Online; accessed 27-August-2018]}
+      \field{title}{Promotionsordnung Fakultät für Mathematik und Informatik}
+      \field{year}{2013}
+      \true{nocite}
+    \endentry
+    \entry{van2000art}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=e7e62ac4420f3a0b1e1211d80bc4bea9}{%
+           family={Van\bibnamedelimb der\bibnamedelima Geer},
+           familyi={V\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84ace8a2dc9c34cd8c43b5ef4f1ed28a}{%
+           family={Hanraads},
+           familyi={H\bibinitperiod},
+           given={JAJ},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a28bd58b9e7500d79cd6268ae5cfc871}{%
+           family={Lupton},
+           familyi={L\bibinitperiod},
+           given={RA},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c0e19a909bf44ad205af44e5cafa689c}
+      \strng{fullhash}{c0e19a909bf44ad205af44e5cafa689c}
+      \strng{fullhashraw}{c0e19a909bf44ad205af44e5cafa689c}
+      \strng{bibnamehash}{c0e19a909bf44ad205af44e5cafa689c}
+      \strng{authorbibnamehash}{c0e19a909bf44ad205af44e5cafa689c}
+      \strng{authornamehash}{c0e19a909bf44ad205af44e5cafa689c}
+      \strng{authorfullhash}{c0e19a909bf44ad205af44e5cafa689c}
+      \strng{authorfullhashraw}{c0e19a909bf44ad205af44e5cafa689c}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Sci. Commun}
+      \field{number}{2}
+      \field{title}{The art of writing a scientific article}
+      \field{volume}{163}
+      \field{year}{2000}
+      \true{nocite}
+      \field{pages}{51\bibrangedash 59}
+      \range{pages}{9}
+      \annotation{item}{author}{default}{1}{}{0}{underlinebase,firstauthor}
+      \annotation{item}{author}{default}{2}{}{0}{firstauthor}
+    \endentry
+    \entry{wilson2018memoir}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=939ad18f84ff6e59c3d1a6435b8ebd88}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {The Herries Press}%
+      }
+      \strng{namehash}{939ad18f84ff6e59c3d1a6435b8ebd88}
+      \strng{fullhash}{939ad18f84ff6e59c3d1a6435b8ebd88}
+      \strng{fullhashraw}{939ad18f84ff6e59c3d1a6435b8ebd88}
+      \strng{bibnamehash}{939ad18f84ff6e59c3d1a6435b8ebd88}
+      \strng{authorbibnamehash}{939ad18f84ff6e59c3d1a6435b8ebd88}
+      \strng{authornamehash}{939ad18f84ff6e59c3d1a6435b8ebd88}
+      \strng{authorfullhash}{939ad18f84ff6e59c3d1a6435b8ebd88}
+      \strng{authorfullhashraw}{939ad18f84ff6e59c3d1a6435b8ebd88}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Memoir Class-Configurable Typesetting User Guide}
+      \field{year}{2018}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

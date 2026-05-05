@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}proposition\PYG{n+nb}{\PYGZcb{}}
+    *text*
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}proposition\PYG{n+nb}{\PYGZcb{}}
+\end{MintedVerbatim}

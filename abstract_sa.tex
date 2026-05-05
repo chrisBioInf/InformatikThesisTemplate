@@ -1,0 +1,27 @@
+% Stand-alone version of the abstract.
+\documentclass[
+%   font=lms,               % text font (lm: latin modern, lms: with serifs)
+%   infopath=/path/to/thesis_info,  % custom path to thesis information file
+%   smallautoref,           % let autorefs have a small first letter
+%   bibtex,                 % use bibtex/natbib instead of biblatex/biber
+%   todo=margin,            % set type of todo notes (margin, plain, off)
+%   smallmargins,           % reduce margin size and increase text width
+%   bibauthorstyle=fggf,    % set the biblatex authorstyle.
+]{UniLeipzigBioinfThesisSA}
+\addglobalbib{misc/literature.bib}
+
+\makeatletter
+% Define \titlegraphic to take one argument and do nothing.
+% This overrides the broken call inside the class file.
+\def\titlegraphic#1{} 
+\makeatother
+
+% Load custom definitions, abbreviations etc.
+\input{misc/custom_defs.tex}
+
+% Document body.
+\begin{document}
+\input{frontmatter/abstract}
+\end{document}
+
+% End of abstract_sa.tex

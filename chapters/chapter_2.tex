@@ -1,0 +1,170 @@
+% Chapter 2
+
+\chapter{Front Matter}% Main chapter title
+\label{Chapter2}
+
+\section{Title Page}%
+\label{opt:bib}
+
+The first page of the work is the title page. The design of this page is
+specified by \citet{web:promotion}. There exist two versions of the title page
+for different applications. The first one is the title page for your
+submission of the thesis. After a successful defense of your thesis, it needs
+to be published. This is done by uploading your work to
+\url{http://ul.qucosa.de}. However, this version needs a different title page.
+This is the second version of the title page. To create this title page
+instead of the submission title page use the class option
+\clsopt{bibversion}.\indexdef{bibversion}
+
+The information on this page is provided by some commands in the data file
+\file{thesis\_info.tex}. An overview of this commands is shown in
+\autoref{tab:titlepage}. Note that most of the information exclusive for the
+bib version can only be given after you defense. This is no problem because
+you only need this version afterwards.
+
+A little note to the \verb!\setsubtitle!: Not every work has or needs a
+subtitle. In this case, you can simply not use the command
+anywhere and the class eliminates the appearance of the subtitle everywhere.
+
+
+\begin{table}
+    \captiont{Titlepage commands}{%
+        The commands that are used in the preamble of \file{main.tex} to
+        input the information of the title page. Also is given if the
+        information is used in the submission (sub) version or the bib
+        version.
+    }%
+    \label{tab:titlepage}
+    \begin{tabular}{l l l}
+        \toprule
+        \tblhead{Command} & \tblhead{Description}& \tblhead{Used for}\\
+        \midrule
+        \verb!\settitle!&The title of the thesis.&sub, bib\\
+        \verb!\setsubtitle!&The subtitle of the thesis.&sub, bib\\
+        \verb!\setauthortitle!&The academic degree if the author.&sub, bib\\
+        \verb!\setauthor!&The full name of the author.&sub, bib\\
+        \verb!\setdayofbirth!&The day of birth of the author.&sub, bib\\
+        \verb!\setbirthplace!&The birth place of the author.&sub, bib\\
+        \verb!\setfilingdate!&The date where you submit your thesis.&sub\\
+        \verb!\setfirstreviewer!&The first reviewer of you thesis&bib\\
+        \verb!\setsecondreviewer!&The second reviewer of you thesis&bib\\
+        \verb!\setdayofdefens!&The day where you defended your thesis&bib\\
+        \verb!\setgrade!&The grade that you get on your thesis&bib\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+\section{Dedication}%
+\label{cmd:dedicate}
+
+The next page after the title page is the Dedication page. Here you can
+dedicate your work to someone or make a suitable insider joke. Whatever it is,
+it should be short and in the best case one sentence. You can input this
+sentence with the \verb!\setdedication! command in the preamble of
+\file{main.tex}.
+
+If you do not want to dedicate your work to someone then leave the command
+empty (\verb!\setdedication{}!). This eliminates the dedication page. Note
+that the content of \verb!\setdedication! can be any latex command so it not
+only possible to write text it could also include a picture or a combination
+of both.
+
+\section{Bibliographic Data}
+
+The third nonempty page contains the bibliographic data of the thesis. This
+is required by \citet{web:promotion}. Most of the data is calculated
+automatically. The only exceptions are the keywords of the thesis which
+are inserted by the command \verb!\setkeywords! in the preamble of
+\file{main.tex}. The keyword should be given as a comma-separated list.
+
+\subsection{Statistics}%
+\label{sub:stats}
+
+In the middle of the page are some automatically calculated value. These
+values are the core of the bibliographic data. However, they are not mandatory
+from the Promotionsordnung \citep{web:promotion}. Thus, you can deactivate
+them with the class option \clsopt{nostatistics}\indexdef{nostatistics}.
+Then nothing is calculated or shown, and only the keywords and the paper the
+thesis is based on are displayed.
+
+\subsection{Thesis Publication}%
+\label{sub:baseon}
+
+Most likely you have published already some of the results you present in this
+thesis. Such a publication is then a publication on which the thesis is based
+on. They can be divided from publications you only cited by the fact that in
+some way you retell them in the thesis. This can even mean that long
+paragraphs are equal between them and the text of the thesis.  This
+information is critical to prevent the accusation of plagiarism. So this
+publications belongs to the bibliographic data of the thesis.
+
+To add publications there is the command \verb!\setbase! in the preamble used.
+The command gets a comma-separated list of BibTeX keys. Then it automatically
+fetches the full information out of your BibTeX file. However, this, of
+course, means that this publication must be in the BibTeX file of the thesis.
+
+The look of this paper can be influenced with the class option
+\clsopt{baseonauthorstyle}\indexdef{baseonauthorstyle}. This change how the
+authors are displayed. More details can be found at \autoref{sub:author}. The
+default value is \quo{gf} which means that first the given name comes and then
+the family name.
+
+A second possibility to change the look of the author respectively give extra
+information of the authors. This is done by annotations. A deeper look into
+annotations can be found in \autoref{sub:annotation}. Two things are vary
+handy here. First to mark authors that share a first authorship. This make it
+possible to mark that you are a first author even when you are not on first
+position. The second thing is the possibility to underline specific authors.
+This is useful when you want to mark you in the papers. Maybe when you not on
+first position or when you have changes your name by a marriage. Even when
+both is not given a mark is a good idea to make the reader easy to spot you.
+
+\section{Abstract}%
+\label{opt:abstract}
+
+Then the abstract of the work follows. This is limited to four pages
+\citep{web:promotion}. The abstract is written in an extra file. By default
+this file is placed at \file{frontmatter/abstract.tex}. You can change the
+path to the abstract with the class option
+\clsopt{abstractpath}\indexdef{abstractpath}. Note that you have to
+\emph{omit} the \file{.tex} extension when defining an alternative value for
+this option.
+
+A stand-alone version of the abstract is generated automatically. You are
+required to hand it in together with your thesis. It will be handed out during
+your defense.
+
+\section{German Abstract}%
+\label{sec:germanabstract}
+
+The template gives the option to include a German version of your abstract.
+This is mandatory when you write a binational thesis. If you only write it for
+the University of Leipzig you can choose if you want to include it. However,
+most people add a German abstract.
+
+The default path is \file{frontmatter/zusammenfassung} (omit the \file{.tex}
+extension). Again you can change the path to the file that contains the German
+abstract with the class option \clsopt{zusammenpath}\indexdef{zusammenpath}.
+If you do not want the German abstract, you can simply set the class option to
+an empty value (\verb!zusammenpath=,!).
+
+\section{Acknowledgments}%
+\label{opt:ack}
+
+The third part of the front matter that inputs text from another path is the
+acknowledgments. Here you should thank everybody that helped you with the
+thesis: family, friends, supervisor, fellow students and maybe me.
+
+The class option \clsopt{acknowledgmentspath}\indexdef{acknowledgmentspath}
+changes the path to the file. The default path is
+\file{frontmatter/acknowledgments} (omit the \file{.tex} extension).
+
+\section{The Table of Contents}
+The \abb{ToC} is directly in front of the main matter. It only contains
+entries from the main matter and the back matter. The \abb{ToC} shows entries
+down to the section level. Subsections are not shown here. However, they are
+shown in mini \abbs{ToC} at the beginning of each chapter. More details on
+mini \abbs{ToC} are given in \autoref{sec:chapter}.
+
+% End of chapters/chapter_2.tex

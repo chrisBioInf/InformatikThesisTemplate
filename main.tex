@@ -1,0 +1,94 @@
+%-------------------------------------
+%       Load document class
+%-------------------------------------
+
+\RequirePackage{calc}
+
+\documentclass[
+%   bibversion, % create the titlepage for the `Pflichtexemplare`
+%   maxdis=3,   % number of pages before full form of abbreviation is used
+%   font=lms,               % text font (lm: latin modern, lms: with serifs)
+    minted,                 % use the minted package for code listings
+%   infopath=/path/to/thesis_info,  % custom path to thesis information file
+%   abstractpath=,          % custom path to abstract
+%   zusammenpath=,          % custom path of the zusammenfassung
+%   acknowledgmentspath=,   % custom path to acknowledgments
+%   chapterstyle=veelo,     % change the appearance of the chapter titles
+%   nominitoc,              % disable small TOCs at beginning of chapters
+%   figlist,                % make a List of Figure
+%   tablist,                % make a List of Tables
+%   smallautoref,           % let autorefs have a small first letter
+%   nostatistics,           % print no statistics on the bib page
+%   bibtex,                 % use bibtex/natbib instead of biblatex/biber
+%   noglossary,             % do not create an abbreviation list
+    todo=margin,            % set type of todo notes (margin, plain, off)
+%   fullcitename,           % show full first name in bibliography
+    definitionindex,        % create index for definitions
+%   smallmargins,           % reduce margin size and increase text width
+%   baseonauthorstyle=gf,   % set the baseon authorstyle.
+%   bibauthorstyle=fggf,    % set the biblatex authorstyle.
+]{UniLeipzigBioinfThesis}
+
+\makeatletter
+% Define \titlegraphic to take one argument and do nothing.
+% This overrides the broken call inside the class file.
+\def\titlegraphic#1{} 
+\makeatother
+
+% Set the graphics path, i.e. the places where LaTeX will look for image files
+% included with \includegraphics. You can specify multiple paths if you like.
+\graphicspath{{graphics/}{graphics/chapter1/}}
+
+
+%-------------------------------------
+%       Add bibliography file(s)
+%-------------------------------------
+% Note that, with the bibtex option, only one bibliography file is supported,
+% while biblatex/biber allows multiple bib files (e.g. one for each chapter).
+
+\addglobalbib{misc/literature.bib}      % filename of the bibliography
+
+%-------------------------------------
+%       Additional packages & commands
+%-------------------------------------
+% Defining all custom commands in a dedicated file helps you to keep the main
+% file clean. You can also load and configure additional packages there.
+
+\input{misc/custom_defs.tex} % custom definitions and packages go to that file
+
+
+%-------------------------------------
+%       Document body
+%-------------------------------------
+
+\begin{document}
+
+\makefrontmatter
+
+\beginmainmatter
+
+% Include the chapters of the thesis as separate files from the chapters folder
+% Uncomment the lines as you write the chapters.
+\part{Introduction}
+\include{chapters/chapter_1}
+\part{Content}
+\include{chapters/chapter_2}
+\include{chapters/chapter_3}
+\include{chapters/chapter_4}
+% New chapters can be included like this:
+% \include{chapters/chapter_5}
+
+\beginappendix
+
+% Include the appendices of the thesis as separate files from the Appendices
+% folder.  Uncomment the lines as you write the Appendices
+\include{appendices/appendix_A}
+\include{appendices/appendix_B}
+\include{appendices/changes}            % version history
+% add another appendix like so
+% \include{appendices/appendix_D}
+
+\makebackmatter
+\end{document}
+
+% End of main.tex

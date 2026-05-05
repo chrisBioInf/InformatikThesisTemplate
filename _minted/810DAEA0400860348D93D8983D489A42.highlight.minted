@@ -1,0 +1,14 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZpc{}Categories can only defined in the preamble.}
+\PYG{k}{\PYGZbs{}addSymbolCategory}\PYG{n+nb}{\PYGZob{}}C\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}Cycle\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}addSymbolCategory}\PYG{n+nb}{\PYGZob{}}T\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}Tree\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+\PYG{c}{\PYGZpc{} Symbols can defined in the document body.}
+\PYG{k}{\PYGZbs{}operatorsym}\PYG{n+nb}{\PYGZob{}}lca\PYG{n+nb}{\PYGZcb{}}[lca]\PYG{n+nb}{\PYGZob{}}The last common ancestor.\PYG{n+nb}{\PYGZcb{}}[T]
+\PYG{k}{\PYGZbs{}sym}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}pi}\PYG{n+nb}{\PYGZcb{}}[kreis]\PYG{n+nb}{\PYGZob{}}The ratio of a circle\PYGZsq{}s
+    circumference to its diameter.\PYG{n+nb}{\PYGZcb{}}[C]
+\PYG{k}{\PYGZbs{}sym}\PYG{n+nb}{\PYGZob{}}C\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}The circumference of a cycle.\PYG{n+nb}{\PYGZcb{}}[C]
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+
+\end{MintedVerbatim}

@@ -1,0 +1,643 @@
+% Chapter 3
+
+\chapter{Main Matter}% Main chapter title
+\label{Chapter3}
+
+\section{Parts}%
+\label{cmd:part}
+
+The highest form of document division is \emph{part}. This division is not
+required at all. However, you can use it to give you work some structure.
+There should not be more than three or four parts in the complete thesis.
+Typical cases would be:
+\begin{itemize}
+    \item I Background or Introduction
+    \item II Methodology
+    \item III Application
+\end{itemize}
+To start a new part the command \verb!\part{title}! is used. This creates a
+part page where the title is shown. It also generates an entry in the
+\abb{ToC}.  The parts are automatically numbered with roman numbers but have
+no influence on other numberings.
+
+\section{Chapters}%
+\label{sec:chapter}
+
+The most important document division is the chapter. A new chapter is started
+with \verb!\chapter{title}!. This creates a chapter page and generates an
+entry in the \abb{ToC}. How the chapter page is designed as described in
+\autoref{sub:chapterdesign}. The chapters are numbered with arabic numbers.
+All following sections and subsections are in the chapter and thus, have the
+chapter number.  The header also contains the chapter information. Thus a new
+chapter changes the look of the header.
+
+Maybe at different locations, the name of the chapter should be different.
+There are three positions: First the entry in the \abb{ToC}. Second, the entry
+in the header of the page and third is the title on the chapter page. It is
+possible to give for each of the three locations a different title. Different
+title version can be useful as an example when the title is too long for the
+header of the page. For this the \verb!\chapter! command has two optional
+arguments.  The command \verb!\chapter[TOC][HEADER]{TITLE}! generates in the
+\abb{ToC} the entry \quo{TOC}. In the header, it generates the entry \quo{HEADER}
+and on the chapter page the entry \quo{TITLE}.
+
+\subsection{Mini TOC}%
+\label{opt:mintoc}
+
+At the beginning of every chapter in the main matter, a mini \abb{ToC} is
+printed. This contains all sections and subsections of the chapter. The
+advantage here is that the reader gets an overview directly at the beginning
+of each chapter and doesn't have turn back to look at the main \abb{ToC}.
+
+However, this needs some space and some people say it is page flay. So you may
+want to disable the mini \abb{ToC}. To do this, set the class option
+\clsopt{nominitoc}.\indexdef{nominitoc} When the mini \abb{ToC} is disabled
+the text of the chapter begins directly on the same page under the chapter
+title.
+
+
+\section{Labels and References}%
+\label{cmd:ref}
+
+For internal references, the \verb!\label{key}! and the \verb!\ref{label}!
+commands are normally used. This is fine and also works for this class.
+However, there is a second option: the \verb!\autoref{label}! command. The
+difference is that \verb!\ref! only returns the number of the referenced
+object, where \verb!\autoref! also returns a suitable prefix depending on its
+type (e.\,g.\ figure, section etc.). An example is shown in \autoref{alg:ref}.
+
+The upside is that the generated hyperlinks already start at the prefix, so
+they can be clicked more easily. It also reduces the possibility of
+referencing the wrong object.  In rare cases, it makes it easier to change the
+type of a float or a section (from/to subsection) because you do not need to
+change the type prefix for every reference.
+
+The downside is that \LaTeX{} needs to know to every type and how it should be
+named.  Also, referencing more than one object is possibly not useful. Every
+element that is predefined by this class can be used here. As long you do not
+introduce new floats or theorems, \verb!\autoref! is the simplest way to go.
+In the manual, \verb!\ref! is only used to reference more than one object (see
+\autoref{sub:chapterdesign}).
+
+A question naturally arising when using \verb!\autoref! is: \quo{How is the
+type prefix displayed?} Should the first letter be uppercase or lowercase? The
+default in this template is that every type prefix is spelled with an
+uppercase first letter.  However, this behavior can be changed with the class
+option \clsopt{smallautoref}\indexdef{smallautoref}. When it is specified, all
+type prefixes are written spelled with lowercase letters.
+
+\begin{algorithm}
+    \captiont{Referencing alternatives}{%
+            The two referencing methods that create the same output.
+        }%
+    \label{alg:ref}
+    \begin{code}{latex}
+See Figure~\ref{fig:veelo}.
+See \autoref{fig:veelo}.
+    \end{code}
+\end{algorithm}
+
+\section{Citations}%
+\label{sec:cite}
+
+There are two main citation commands that you should use: \verb!\citet! and
+\verb!\citep!.  \verb!\citet! is used when the citation is read as part of the
+\textbf{t}ext (\ie when using the author name as a noun), \eg when
+saying that the \pkg{biblatex} package was written by \citet{web:biblatex}.
+\verb!\citep! is used when the entire citation is in \textbf{p}arentheses
+(which should be the default case), \eg when simply saying that we use the
+\pkg{biblatex} package \citep{web:biblatex}.
+
+Depending on whether the \clsopt{bibtex} option is used for loading the class,
+citations are provided by the \pkg{natbib} package based on \pkg{bibtex}
+(\clsopt{bibtex} given), or with \pkg{biblatex} in the \pkg{natbib}
+compatibility mode (\pkg{bibtex} \emph{not} given). Since \pkg{biblatex}
+is more modern and robust, you should not specify the \pkg{bibtex} option
+unless you have a good reason to do so. By default, the \cmd{author-year}
+style is used. Thus, not a number but the author name and year is printed.
+This is more informative than only giving a number that you have to remember
+and look up in the list of references to know the author.  Though numbered
+citations are more common in papers, you should consider that your thesis is
+going to be a much bigger document and the bibliography may become huge.
+
+\section{Margin Notes}%
+\label{cmd:margin}
+
+There is the possibility to print notes in the margin of the space. More
+precisely on the outside margin of the page. These notes are very prominent
+and seen easily but destroy the reading flow because they are outside of the
+normal reading area. This can be used for information that should be easily
+found but should not be used too often because then it loses its importance
+and only disturbs the reading flow.
+
+To do such a margin note use the command \verb!\marginnote{text}!. An example
+is in this manual the class option. Every time the class options are presented
+in different sections all over the manual, the command appears as a margin
+note.  Thus, every time a new class option is introduced a margin note gives a
+hint that it is presented here. This makes it possible to scan quickly for a
+specific class option.
+
+\section{Definition Index}%
+\label{cmd:defindex}
+
+One of the most popular uses of margin notes is to give a reader the position
+of a definition. Then when a term is used the reader can easily find it and
+check what it means. This concept can be extended by creating an index at the
+end of the thesis where for every definition a  site is given where to find
+it. Such that from anywhere in a large thesis fast the right position of a
+definition can be found.
+
+This can be archived with a special command. The template gives the
+\verb!\indexdef{name}! command. This command creates a margin note with the
+given name at the side. Further when the
+\clsopt{definitionindex}\indexdef{definitionindex} class option is given an
+entry in the Definition Index is created.
+
+However, not every time you want to create an index you also want to create a
+margin note. Thus, there are two different commands also given in to create
+index entries. First the \verb!\indexnomn{name}! command. This command creates
+an entry in the index but does not print anything at the position. It could be
+combined with the \verb!\marginnote{text}! command to create different content
+in the margin note and the index.
+
+The second other command is \verb!\indexbf{name}!. This command also creates
+an index entry and print \quo{name} in bold letters.  Thus, a highlighting of the
+position is possible without the disturbing character of margin notes. It is
+particularly useful when small margins are used.
+
+\section{Abbreviations}%
+\label{sec:abb}
+
+% Abbreviation definitions look like this:
+%   \defabb{UTC}{Coordinated Universal Time}
+% But you should add them to misc/custom_defs.tex, not to the chapter content!
+Every thesis uses abbreviations. An abbreviation can be a generally used term
+like time zones (\abb{UTC}) or a topic-specific thing (\abb{DAG}) but also
+very specific problem descriptions (\abb{mFAS} Problem). So it is necessary to
+keep track of these abbreviations in a List of Abbreviations.  To add a new
+abbreviation use the \verb|\defabb{short}{long}| command.
+
+Besides this list, other things must be considered. If an abbreviation is
+first introduced a long version must be given to explain the abbreviation. In
+the following, only the short version is used. However, after some pages of
+not using the abbreviation, it is useful to use the long version again so that
+the reader gets a reminder what this abbreviation stands for.  Another thing
+that must be considered is that sometimes the plural (\abbs{DAG}) of an
+abbreviation is used (per default an \quo{s} is added to the end).
+
+So the abbreviation engine gives more than the \quo{List of Abbreviations}.
+It also gives the possibility to access earlier defined abbreviations with the
+\verb!\abb! (for plural \verb!\abbs!) command. This returns the long version
+with the short version in parentheses after the long version was not used on
+the pages before. An example of the syntax can be found in \autoref{alg:abb}.
+
+The default plural form with simply appending an \quo{s} is not always the
+correct way to go (\abbs{SV}). For such situations, the alternate command form
+\verb|\defabb[label]{short}[plural short]{long}[plural long]|
+with the optional arguments \verb|plural short| and \verb|plural long| can be
+used.  One is the short version in plural and the other the long version in
+the plural. Note that it is possible to give only one of the two plural forms,
+the other is then simply created by adding \quo{s}. The \verb|label| argument
+allows to assign a label to the abbreviation such that it can be referred to
+using \verb|\abb{label}|, which then still prints the supplied
+short or long form.  With the two-argument command, the short form of the
+abbreviation is itself used as the label. However, for complex abbreviations
+including formatting and other commands, this is not possible.
+
+\begin{algorithm}
+    \captiont{The abbreviations engine.}{%
+        An example definition of Abbreviation and the use of it. It is also an
+        entry to the List of Abbreviations created.
+    }%
+    \label{alg:abb}
+    \begin{code}{latex}
+\defabb{DAG}{Directed Acyclic Graph}
+The life is a \abb{DAG}.
+%The life is a Directed Acyclic Graph (DAG).
+Many \abbs{DAG} together create a \abb{DAG}.
+%Many DAGs together create a DAG.
+\defabb{SV}[SVs]{Super Vertex}[Super Vertices]
+\abbs{SV}
+%Super Vertices (SVs)
+    \end{code}
+\end{algorithm}
+
+The default value of pages between two uses of \verb!\abb! before the long
+version is printed again is 3. This can be changed with the \clsopt{maxdis}
+class option.\indexdef{maxdis} A value of 0 means that only the first
+appearance is printed with the long version all other occurrences have the
+short version.
+
+The functionality described here comes from the glossary package. It is a
+large package. Thus, it makes sense not load it when you do not want any
+\quo{List of Abbreviation} at all. This deactivation is done with the class
+option \clsopt{nostatistics}.\indexdef{nostatistics} After the deactivation,
+the abbreviation commands still exists but do different things. The
+\verb!\defabb! command does nothing, the \verb!\abb! command simple print the
+abbreviation, and the \verb!\abbs! command print the abbreviation with an
+\quo{s} at the end. This behavior makes it possible to use them and then later
+activate the glossary package again and have the full functionality with the
+commands.
+
+\section{Symbols}%
+\label{sec:sym}
+
+In the back matter, a List of Symbols is presented. To make this possible,
+symbols need to be defined first.  To introduce a new symbol, use the
+command \verb!\sym{symbol}{Description}!.  The symbol can then be used in a
+mathematical environments as well as in text. It is also added to the List of
+Symbols using the provided description.  An example is shown in
+\autoref{alg:sym}. While symbols may be defined within the document body, \eg
+directly where they are used for the first time, it may be more manageable to
+maintain all definitions in \file{misc/custom\_defs.tex} to have them all in a
+single place.
+
+\begin{algorithm}
+    \captiont{The sym command.}{%
+        An example definition of Symbol. The result can be seen in the List of
+        Symbols.
+    }%
+    \label{alg:sym}
+\begin{code}{latex}
+\sym{C}{The circumference of a cycle.}
+\sym{\pi}[kreis]{Ratio of a circle's
+    circumference to its diameter.}
+We use the new cool symbol in math
+$\symkreis = 3.14\dots$ and in text \symkreis.
+
+\operatorsym{lca}[lca]{The last common ancestor.}
+Let \symlca be the last common ancestor. When $v$ has
+two children $u$ and $w$ then is $\symlca(u,w)=v$.
+\end{code}
+\end{algorithm}
+
+This is some extra work for the \quo{List of Symbols}. However, this list
+really helps the reader to understand complex formal definitions. It is also
+very helpful for the writer. The list makes it easy to determine if a symbol
+is used twice with varying meaning. This should be avoided, even in such a
+complex work as a thesis.
+
+The syntax is simple. The definition has an optional field in the middle that
+defines a name: \verb!\sym{symbol}[name]{Description}!. This name can then be
+used to reference back to the symbol using the command \verb!\sym*name*!. If
+the name is omitted, the symbol itself is used as the name. This works only if
+the symbol consists of regular letters, otherwise a name must be provided.
+
+Sometimes you may want to define a custom math operator as a symbol. This can
+be done by using the \verb!\DeclareMathOperator{\lca}{lca}! command in
+\file{misc/custom\_defs.tex} (or another place in the preamble).  Then, you
+can create a symbol using this operator. However, if you really want, you can
+also define an operator symbol in the document body with the help of
+the \verb!\operatorsym{symbol}[name]{Description}! command. Note that this
+makes it necessary to use the \verb!\sym*name*! command to refer to the
+operator. If you do not wish to have the \quo{sym} prefix, you need to declare
+the math operator using \verb!\DeclareMathOperator{\lca}{lca}!.
+
+The symbol engine has a problem with the \quo{$\vert$} symbol. However, this
+can be fixed by not using direct \quo{$|$} but one of the two command
+replacements: \verb|\vert| or \verb|\mid|. The first one is more or less the
+same as \quo{$|$} and is used for example to get the absolute value of a number.
+The second have more space around it and is used in constructive set
+definitions.
+
+\operatorsym{lca}[lca]{The last common ancestor.}[T]
+\sym{\pi}[kreis]{The ratio of a circle's circumference to its diameter.}[C]
+\sym{C}{The circumference of a cycle.}[C]
+
+\subsection{Ordering and Categories}
+The ordering of the symbols fellow normal the ASCII code
+(+<1<:<A<\textbackslash<a). Note symbols define with \verb!\operatorsym! are
+placed with \verb!\operator! at the beginning. Especially the fact that
+\quo{\textbackslash} is placed between \quo{A-Z} and \quo{a-z} in the ordering is
+often some way counterintuitive. To improve on this, you can customize the
+order.
+
+Both \verb!\sym! and \verb!\operatorsym! have an optional argument at the
+end. This defines the ordering. It is important to note that every symbol for
+which this last argument is given is placed behind every symbol without a last
+argument.  Thus, it often only makes sense to give such an ordering argument
+either to all symbols or to none. As an example if \quo{\symlca} should be
+placed as lca in the ordering the definition should look like:
+\verb!\operatorsym{lca}{The last common ancestor.}[lca]!.
+
+Some times you want to group you symbols. This can be archived in two steps.
+First you must define the groups in the preamble. This is done with
+\verb!\addSymbolCategory{C}{Cycle}! command. The first argument must be a
+\emph{capital letter} and the second argument the name of the category.
+Second, first argument can then be used as last argument on the symbol
+definition to get a element in the category. It is important to note that this
+really only work with one capital letter. When more then one letter is given or
+a small letter \LaTeX{} can not use the category. An example can be seen in
+\autoref{alg:symcat}.
+
+\begin{algorithm}
+    \captiont{The symbol categories.}{%
+        An example definition of Symbol categories. The result can be seen in
+        the List of Symbols.
+    }%
+    \label{alg:symcat}
+\begin{code}{latex}
+%Categories can only defined in the preamble.
+\addSymbolCategory{C}{Cycle}
+\addSymbolCategory{T}{Tree}
+
+\begin{document}
+% Symbols can defined in the document body.
+\operatorsym{lca}[lca]{The last common ancestor.}[T]
+\sym{\pi}[kreis]{The ratio of a circle's
+    circumference to its diameter.}[C]
+\sym{C}{The circumference of a cycle.}[C]
+\end{document}
+
+\end{code}
+\end{algorithm}
+
+\subsection{Symbols with Parameters}
+In many situations, you do not only have a symbol but also the symbols depend
+on other things. An example would be the vertex set of a graph. There are at
+least two different used notations for this $G.V$ or $V(G)$.  However, it
+makes only sense when the graph (in this case $G$) is given. Thus a vertex set
+symbol needs a place that can be changed.
+
+This behavior is reached with the \verb!\macrosym! command. This command
+defines a macro that can be used in the thesis and also generates an entry in
+the list of symbols. Because this needs a name for the macro, its signature is
+different than the other methods.
+
+The command \verb!\macrosym{content}{name}[C]{d}[p1][p2]...!
+creates the macro that is \verb!\sym*name*!. The content is what is printed.
+It is given in latex macro form which means for the first parameter is \quo{\#1}
+and the second \quo{\#2} and so on. The category (C) and description (D) are the
+same as by the other commands. The command ends with a list of the parameters
+that are used in the index. There are up to 5 parameters possible. When you
+want a macro with four parameters you need to give four at the end of the
+command.
+
+\begin{algorithm}
+    \captiont{The macro symbol command.}{%
+        Some examples of macro symbols and how they can be used.
+    }%
+    \label{alg:symmac}
+\begin{code}{latex}
+%Let G be the 'graph' category.
+\macrosym{V(#1)}{vertexset}[G]{The vertex set of $G$}[G]
+\macrosym{E(#1)}{edgeset}[G]{The vertex edge of $G$}[G]
+\macrosym{#1[#2]}{indsub}[G]{Creates induced subgraph of $G$
+ with vertex set $U$ }[S][U]
+%Let S be the 'set' category.
+\macrosym{###1}{cardinality}[S]{The number of elements
+in set $U$}[U]
+
+When $D$ is a directed graph and $U\subset\symvertexset{D}$ and
+$H=\symindsub{D}{U}$ have no cycles then is
+$\symcardinality{\symedgeset{H}}\leq\frac{1}
+{\symcardinality{U}(\symcardinality{U}-1)}$.
+\end{code}
+\end{algorithm}
+%Let G be the 'graph' category.
+\macrosym{V(#1)}{vertexset}[G]{The vertex set of $G$}[G]
+\macrosym{E(#1)}{edgeset}[G]{The vertex edge of $G$}[G]
+\macrosym{#1[#2]}{indsub}[G]{%
+    Creates induced subgraph of $G$ with vertex set $U$ }[S][U]
+%Let S be the 'set' category.
+\macrosym{\##1}{cardinality}[S]{The number of elements in set $U$}[U]
+
+\autoref{alg:symmac} creates this output:
+\begin{quote}
+    When $D$ is a directed graph and $U\subset\symvertexset{D}$ and
+    $H=\symindsub{D}{U}$ have no cycles then is
+    $\symcardinality{\symedgeset{H}}\leq
+    \frac{1}{\symcardinality{U}(\symcardinality{U}-1)}$.
+\end{quote}
+
+\section{Floats}%
+\label{sec:float}
+
+There are three basic types of floats: figure, table and algorithm. Beside
+this, there are two special types: SCfigure and SCtable. These are the same as
+the floats without \quo{SC}. The difference is that in these floats the caption
+is placed beside the figure (table). This can be used with narrow figures
+(tables) to save space. An example of SCtable can be seen at
+\autoref{tab:fontoption}.
+
+\subsection{Figures}
+
+The include \verb!\includegraphics! command of a figure needs the path to the
+figure. The important part is that this path must be given relative to the
+main.tex file. For an example is the picture veelo.pdf in the Figures folder
+linked as \quo{graphics/ell.pdf} in every Chapter.
+
+
+\subsection{Captions}%
+\label{sub:cap}
+
+The caption can be used with the normal \verb!\caption! command. Remember,
+that the optional argument that sets the title on the \quo{List of \dots} page.
+However, an alternative in this class is the \verb!\captiont! command that has
+a second mandatory argument that sets the title and also writes it as bold at
+the beginning of the caption. An example is shown in \autoref{alg:caption}.
+
+All captions use a little smaller font than the rest of the text. This helps
+to distinguish between text and caption of a float. This supports the reading
+flow.
+
+The caption is placed above or under the content of the float depending on the
+position of the caption command. However, normally the figure caption should
+be placed under the content, in a table above the content and in an algorithm
+also above the content.
+
+\begin{algorithm}
+    \caption{%
+        An example of how the \cmd{captiont} command can be used.
+    }%
+    \label{alg:caption}
+    \begin{code}{latex}
+\begin{SCtable}
+    \captiont{Font values.}%
+    {The values that the class option \quo{font} can have.}%
+    \label{tab:fontoption}
+    \begin{tabular}{l r}
+        \toprule
+        \tblhead{Value} & \tblhead{Used Font}\\
+        \midrule
+        lm  & Latin modern without serifs (default)\\
+        lms & Latin modern with serifs\\
+        cm  & Computer modern without serifs\\
+        cms & Computer modern with serifs\\
+        \bottomrule
+    \end{tabular}
+\end{SCtable}
+    \end{code}
+\end{algorithm}
+
+\section{Code}%
+\label{sec:code}
+
+This template provides two different ways to typeset program code. One is
+meant for code written in a real programming language and includes syntax
+highlighting, the other is for pseudo-code that is more abstract than real
+code.  These variants use the \cmd{code} and the \cmd{algorithmic}
+environments, respectively.  However, in both cases, a surrounding
+\emph{float}, which is automatically positioned and provides a caption that
+can be labelled and referenced, is useful. This feature is available in form
+of the \cmd{algorithm} environment, which then includes either a \cmd{code} or
+a \cmd{algorithmic} environment. An example is shown in \autoref{alg:algo}.
+
+\begin{algorithm}
+    \caption{%
+        Example of an \cmd{algorithm} float enclosing a
+        \cmd{code} environment to display its own code.
+    }%
+    \label{alg:algo}
+    \begin{code}{latex}
+\begin{algorithm}
+    \caption{%
+        Example of an \cmd{algorithm} float enclosing a
+        \cmd{code} environment to display its own code.
+     }%
+    \label{alg:algo}
+    *code environment*
+\end{algorithm}
+    \end{code}
+\end{algorithm}
+
+\subsection{Pseudo Code}
+To typeset pseudo code, the \pkg{algorithmic} package is used. See
+\autoref{algo:algorithmic} for how the code looks like
+For more details what commands exist, please have a look at the
+manual.\footnote{\url{ftp://ftp.fu-berlin.de/tex/CTAN/macros/latex/contrib/algorithms/algorithms.pdf}}
+
+\begin{algorithm}
+    \caption{%
+        The \cmd{algorithmic} environment can be used to typeset
+        pseudo-code.
+    }%
+    \label{algo:algorithmic}
+    \begin{code}{latex}
+\begin{algorithmic}
+    *pseudo-code*
+\end{algorithmic}
+    \end{code}
+\end{algorithm}
+
+\subsection{Real Code with Highlighting}%
+\label{sub:codehigh}
+
+The \cmd{code} environment is used to typeset code written in a real
+programming language. Passing the name of a supported programming language,
+\eg \verb!\begin{code}{python}!, allows the package to apply syntax
+highlighting to the code. An example is given in \autoref{alg:code}.  Though
+\cmd{code} environments can be used by itself to place the code exactly at the
+given position, you should usually enclose it by an \cmd{algorithm}
+environment to allow automatic positioning and provide a proper caption as in
+\autoref{alg:algo}.
+
+For code highlighting, two different packages are used. The default package is
+the \pkg{listings} package. This is nice because it works out of the box on
+any \LaTeX{} distribution. To achieve nicer syntax highlighting (with color),
+another package is used: the \pkg{minted} package. It depends on the external
+\prog{Python} program \prog{Pygments}. In order to use it, you need to install
+them. More information on this can be found
+online.\footnote{\url{https://github.com/gpoore/minted}} The manual is created
+with \pkg{minted}.  To use \pkg{minted} instead of \pkg{listings} you set the
+class option \pkg{minted}.\indexdef{minted}
+
+However, which package you use does not have an influence on the environment
+name, which is always \cmd{code}. This makes it possible to switch between
+both options on the fly.
+
+\begin{algorithm}
+    \caption{An example how code highlighting works.}%
+    \label{alg:code}
+    \begin{code2}{latex}
+\begin{code}{python}
+    *code*
+\end{code}
+    \end{code2}
+\end{algorithm}
+
+
+\section{Math Environments}%
+\label{sec:theo}
+
+There are six different environments that belong to this class. They all have
+their own uses. The explanations of them are taken from \citet{web:theorems}.
+
+
+\subsection{Proposition}
+A proved and often interesting result, but generally less important than a
+theorem.
+\begin{code}{latex}
+\begin{proposition}
+    *text*
+\end{proposition}
+\end{code}
+
+\subsection{Definition}
+A precise and unambiguous description of the meaning of a mathematical term.
+It characterizes the meaning of a word by giving all the properties and only
+those properties that must be true.
+\begin{code}{latex}
+\begin{definition}
+    *text*
+\end{definition}
+\end{code}
+
+\subsection{Corollary}
+A result in which the (usually short) proof relies heavily on a given theorem
+(we often say that “this is a corollary of Theorem A”).
+\begin{code}{latex}
+\begin{corollary}
+    *text*
+\end{corollary}
+\end{code}
+
+\subsection{Theorem}
+A mathematical statement that is proved using rigorous mathematical reasoning.
+In a mathematical paper, the term theorem is often reserved for the most
+important results.
+\begin{code}{latex}
+\begin{theorem}
+    *text*
+\end{theorem}
+\end{code}
+
+\subsection{Lemma}
+A minor result whose sole purpose is to help in proving a theorem.  It is a
+stepping stone on the path to proving a theorem.
+\begin{code}{latex}
+\begin{lemma}
+    *text*
+\end{lemma}
+\end{code}
+
+\subsection{Proof}
+Every Corollary, Theorem and Lemma must be proven. Thus, such an environment,
+a Proof environment should follow.
+\begin{code}{latex}
+\begin{proof}
+    *text*
+\end{proof}
+\end{code}
+
+\section{Todo Notes}%
+\label{sec:todo}
+
+Often, some task is left undone and has to be finished later.  This should be
+made visible in the thesis. The \verb!\todo{}! command is the solution to this
+problem.  It creates a colored note containing the todo text.\todo{This is an
+example of a todo note. Try changing the \clsopt{todo} option of the class and
+see what happens.} The exact behaviour can be controlled with the class option
+\clsopt{todo}, which can be set to any of the three values \emph{margin},
+\emph{plain}, and \emph{off}.  The \emph{margin} setting creates orange boxes
+located in the margin, keeping the layout intact and separating text and
+tasks. Additionally, a list of all remaining tasks is generated and placed on
+the first page of the thesis. This is probably the most elegant solution, but
+relies on the external package \pkg{marginnote}.  The \emph{plain} option
+simply inserts the task as red text, enclosed in brackets and with a smaller
+font size than the main text. It has no external dependencies.  The value
+\emph{off}, finally, allows to temporarily disable the output of todo notes
+completely without deleting them.  This is useful for creating drafts of the
+thesis that should not contain the note text.
+
+% End of chapters/chapter_3.tex

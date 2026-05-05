@@ -1,0 +1,532 @@
+\chapter{Introduction}% Main chapter title
+\label{Chapter1} % For referencing the chapter elsewhere, use \ref{Chapter1}
+
+\section{Welcome}
+
+Welcome to the manual of the Uni Leipzig Bioinf Thesis class. This class gives
+a solid backbone for your thesis writing at the \quo{Institut für Informatik}
+at the \quo{Universität Leipzig}. It can be used as it is without any further
+configuration. However, many things can be configured. So hopefully it fits
+your needs and your idea of design.
+
+This template is designed to fulfill the requirements of the
+\quo{Promotionsordnung Fakultät für Mathematik und Informatik} as it is in 2018
+\citep{web:promotion,web:promotion2}. So in case of changes in the regulation
+some parts of this work may not longer be suitable.
+
+This class has many class options and also introduces some new commands that
+can be used. So when you really want to use it you should at least read
+\autoref{AppendixA} and \autoref{AppendixB}. However, I would recommend you to
+read the complete manual so you get an overview how things work and how things
+should be done. Also, the short overviews in the Appendix reflect not every
+single aspect of the commands and options.
+
+This manual is not an introduction to \LaTeX. The authors assume that you
+already typeset a scientific work with \LaTeX{} before and that you do not
+need an introduction to the basic commands. The typesetting of mathematical
+formulas is not covered, either.
+
+The use of this class is free and you can change things by yourself and
+redistribute it if you like. However, if you use it and it makes your life
+easier, I would appreciate it when you mention me in your acknowledgments.
+Something short like: \quo{Thanks to Fabian Gärtner for the latex class of
+this thesis.}
+
+If something does not work as expected, something needs an update because of
+some changes or you miss an option to modify the template feel free to write
+me an email: \email{fabian@bioinf.uni-leipzig.de}.  I will see if I can help
+you.
+
+\subsection{Disclaimer}
+Before we start, here is a little warning. At the time I made this template, I
+was a PhD student.  I have tried to be as accurate as possible in everything
+that is written in this manual,  and also in choosing its default options.
+However, some people might disagree with me and there is not just one correct
+answer but rather several possible options. So trust your supervisor more than
+anything I have done here. Again if you get some feedback that something has
+to change I would appreciate hearing from you such that I can include changes
+in order to keep the template updated.
+
+
+\subsection{This Manual}
+This manual was itself created with the given
+\pkg{UniLeipzigBioinfThesis} class. In the original download, the source
+files contain the code of this manual so that you have direct examples how
+things are done in this class. Of course, you will delete it in order to write
+your own content in the files. However, before you do it you may have a look
+at the content and keep the pdf file in a separate location such that you can
+reread the manual. You can also download it again in order to see the original
+sources.
+
+The only difference between this source and the source of \file{manual.pdf}
+is the class option \clsopt{minted} (see \autoref{sub:codehigh}) and
+\clsopt{zusammenpath} (see \autoref{sec:germanabstract}) are set different.
+This is done to make it compile and a offer good starting point without any
+further changes.
+
+\section{Double-sided Print}
+This style only supports double-sided layout for the thesis. This is not a
+lack of an option, this is done purposely.  When reading on a screen, it makes
+more or less no difference if the document is single-sided or double-sided.
+The difference is in the way it is printed.  A double-sided print is done such
+that every sheet of paper is printed on both sides. This has only advantages.
+It is closer to normal books and therefore more natural to read. It makes the
+thesis thinner so that it is easier to handle. It saves you money because you
+print on and tie less pages. The last and best reason is that it reduces the
+waste of paper and makes the world a better place. I believe this is the
+reason why we all write a thesis, to make the world a better place.
+
+
+\section{File Structure}
+This template splits the content of the thesis into various different files.
+This helps you to keep your work organized and allows you to only compile the
+parts that you currently edit. It also enables the automatic generation of
+stand-alone documents from several parts of the work (e.\,g.\ the abstract),
+which are formally required for the Dekanat when you hand in your thesis.
+Other files provide the functionality of the class itself and need not be
+changed.  Another set of files helps you to compile the thesis and store your
+personal information.
+
+The thesis itself is compiled from the file \file{main.tex} in the root
+directory. In this file, the thesis class is loaded and basic configuration is
+done. Especially, every path to another file can be changed here so that all
+files can be moved or renamed if necessary. More details are given in
+\autoref{sec:main}. Then, all the content from the subfolders is included and
+compiled into a single document. The class itself is taking care of creating
+the front matter and back matter for you. In addition to the main file, one
+tex file for each stand-alone document created from the thesis content is
+provided:
+\begin{description}
+    \item[\file{abstract\_sa.tex}:]
+        The stand-alone abstract.
+    \item[\file{curriculum\_scientiae\_sa.tex}:]
+        The curriculum outlining your scientific career.
+    \item[\file{publications\_sa.tex}:]
+        The list of all your scientific publications.
+    \item[\file{selbststaendigkeitserklaerung\_sa.tex}:]
+        The declaration that you are the original author of all your thesis'
+        content and that you have properly marked all citations.
+\end{description}
+
+The classes for the thesis and the stand-alone documents are defined in the
+files \file{UniLeipzigBioinfThesis.cls} and
+\file{UniLeipzigBioinfThesisSA.cls}, respectively. A style file,
+\file{UniLeipzigBioinfThesisCommon.sty}, contains code that is shared by
+both classes.  These classes make all commands and styles available to the tex
+files. You should not edit these files unless you want to add a new feature or
+have to fix a bug.
+
+The files \file{Makefile} and \file{latexmkrc} help you to compile the
+documents, as explained in \autoref{sec:compilation}.
+
+The folders have thematically different content. The \file{frontmatter}
+folder contains files that are used in the front matter (abstract,
+acknowledgments,\dots), the \file{chapters} folder contains a single tex
+file for each chapter of the main text. The \file{graphics} folder contains
+the graphics for the figures of the thesis.  The \file{appendices} folder
+contains a single tex file for each appendix.  The last folder is
+\file{backmatter} which contains files that are used in the back matter
+(\eg the Curriculum Scientiae).  The \file{misc} folder contains two data
+files and a tex file. \file{literature.bib} is the \prog{BibTeX} file that
+contains all works that you cited from. Your personal data and thesis
+information like title, keywords etc., is stored in \file{thesis\_info.tex}.
+File \file{custom\_defs.tex} is for all commands you may want to define
+yourself, as well as for loading other packages you may want to use. It comes
+with some commands already that you can use or change if you like.
+
+Finally, \file{manual.pdf} contains a copy of this manual. You may want to
+keep it for future reference.
+
+
+\section{How to Compile It}%
+\label{sec:compilation}
+
+The short version: run \cmd{make} to compile everything, or \cmd{make
+main} to only compile the thesis. Run \cmd{make watch} to continuously
+compile the thesis as you write. If you have problems or want more
+information, please read on.
+
+As of release v2.0 of this class, the build system has been completely
+rewritten. It now relies on \prog{latexmk}, a dedicated tool for compiling
+\LaTeX{} documents that is taking care of all required steps, including the
+execution of \prog{bibtex}, \prog{biber}, \prog{makeindex},
+\prog{pdflatex} etc., in the right order and as often as necessary. It is
+also more efficient than manually calling all these tools, because it
+determines which files have changed and regenerates the output as necessary.
+Furthermore, it offers file monitoring to automatically recompile the
+document as soon as any changes to the source code are saved, as well as
+cleaning procedures. Still, a \file{Makefile} is provided to allow calling
+\prog{latexmk} with a single command without having to remember all the
+options and paths. For more information on how to compile using the provided
+\file{Makefile}, refer to \autoref{sub:make}.
+
+\subsection{Configuring \prog{latexmk}}
+With this template comes the file \file{latexmkrc}, which already contains
+the required configuration for \prog{latexmk}. Separating the configuration
+from the \file{Makefile} has the advantage that \prog{latexmk} can also be
+called via any third-party \LaTeX{} development environment or editor without
+further configuration. For example, the compilation feature of the
+\prog{vimtex} plugin for the editor \prog{vim} works out of the box with
+the provided files.
+
+
+\subsection{Makefile}%
+\label{sub:make}
+
+The provided \file{Makefile} is divided into the sections \quo{Config} and
+\quo{Rules}. Usually, you don't have to touch the rules at all, and
+changing the configuration variables is only necessary when you rename the
+main or stand-alone tex files.
+
+To compile the thesis and all other stand-alone document, run \cmd{make
+all} or simply \cmd{make} in the thesis directory. \cmd{all} is called
+the (default) \emph{target}, \ie the object that is to be made. The
+\file{Makefile} also defines several other useful targets:
+%
+\begin{description}
+    \item[main:] Compiles the main file, \ie the thesis. The main file is
+        by definition the first file listed in the variable
+        \cmd{TEX\_FILES}. Running \cmd{make main} is the quickest
+        way to compile only the thesis, omitting the stand-alone documents.
+    \item[\emph{filename}.pdf:] Compiles (only) \file{filename.pdf} from
+        source \file{filename.tex} for any file name.
+    \item[clean:] Removes \emph{all} generated files, including the pdf files.
+    \item[watch:] Watches for changes to any of the sources of the main file
+        and re-compiles them as soon as any are detected.
+    \item[watch-filename.tex:] Like \cmd{watch}, but watch
+        \file{filename.tex} instead of the main file.
+\end{description}
+%
+You can also set the path to \prog{latexmk} and additional command line
+arguments in the \file{Makefile}. A few additional targets are provided for
+development purposes:
+%
+\begin{description}
+    \item[dist:] Make a tarball (\file{.tar.gz} archive) of the thesis
+        directory. Target \cmd{clean} is executed first. The file name can
+        be set by changing the value of variable \cmd{DIST\_NAME}. Set
+        \cmd{DIST\_EXCLUDE} to prevent certain files or directories from
+        being included in the archive.
+    \item[changes:] Update \file{CHANGES.md} by converting
+        \file{appendices/changes.tex} (\ie the version history) to MarkDown
+        using \prog{Pandoc}.
+    \item[html:] Generate HTML versions of \file{README.md} and
+        \file{appendices/changes.tex} to update the website of the thesis
+        template.\footnote{\url{%
+        https://www.bioinf.uni-leipzig.de/intern/phd-thesis-class/}}
+\end{description}
+
+\subsection{Dependencies and Compiling at the Bioinf Institute}
+To compile this template, you obviously need a \LaTeX{} distribution. Under
+Linux, this is usually \prog{TeXLive}, which is available in the official
+package repositories of any major Linux distribution. However, as the template
+has many features, it also depends on many packages. The easiest way to
+provide them all is a full installation of all \prog{TeXLive} packages. In
+Fedora 36, this is done by installing package \pkg{texlive-scheme-full}
+using \cmd{dnf}. In Ubuntu 22.04, install \pkg{texlive-full} and
+\pkg{python3-pygments} with \cmd{apt}.  Also make sure that
+\cmd{make} is available if you want to use the \file{Makefile}.  As of
+2022, the computers at the Bioinformatics institute run varying versions of
+Fedora. If the required packages are not installed on your machine yet, please
+send a short email to the system administrator --- Jens will gladly help you
+out.
+
+Though this template has not been tested on Windows, you may have luck with
+\prog{MikTeX} as well.
+
+
+\section{The Main File}%
+\label{sec:main}
+
+The main file can be divided into two parts: the preamble and the document
+body. In the preamble the class is loaded with the desired options. In the
+document body, the actual content of the thesis is included from other tex
+files.
+
+\subsection{Preamble}
+The first thing that is done in the preamble is loading the required classes.
+This is done with \verb|\documentclass[]{UniLeipzigBioinfThesis}|.  Class
+options can be added in the square brackets.  The possible options are spread
+in the manual but all are marked with a margin note.
+
+After this, you need to attach one or more bib files to you thesis this is
+explained in \autoref{sec:bib}. You can also defined additional commands and
+load other packages here if necessary.
+
+\subsection{Document Body}%
+\label{sub:body}
+
+The document starts with the \verb!\makefrontmatter! command. This command
+creates the complete front matter of the thesis. This includes the title page,
+the dedication, the bibliographic description, the abstract, the German
+abstract, the acknowledgments and \abb{ToC}. Make sure that your personal data
+in file \file{thesis\_info.tex} is correct as it is used to generate the
+front matter.
+
+The main matter of the thesis start with the call of the
+\verb|\beginmainmatter| command. The command starts the page numbering with
+Arabic numerals. The main matter is composed of chapters. Every chapter is in
+a separated file. This files then are included in the main file with the
+\verb|\include| command. For more details on chapters, have a look at
+\autoref{sec:chapter}. The only other elements in the main matter are the
+parts.  Parts are described in more detail in \autoref{cmd:part}.
+
+The next part is the appendix. To start this part use the
+\verb|\beginappendix| command. It changes the chapter behavior and adds an
+entry to the \abb{ToC}.  Every appendix is in an extra file. To add these
+files, use the \verb|\include| command again. For more information, see
+\autoref{sec:app}. The last command is then \verb|\makebackmatter|. This
+command creates the back matter that includes the List of Xs, bibliography,
+curriculum scientiae and the declaration.
+
+\section{Base Settings}
+\subsection{Margins}%
+\label{opt:margins}
+
+By default, the template uses relatively wide margins as defined by the
+default settings of the \emph{Memoir} class. Though this may seem unusual
+first, especially when you are used to a typical Word document, but it is
+generally considered the more aesthetic choice by most typographers. It also
+reduces the eye movement  compared to longer lines and thus can be read more
+easily. However, when you have much to say, this can make your thesis very
+large and heavy when printing. Thus, it could make sense to reduce the margin
+size. This of course reduces the space for margin notes and I would not use
+them with small margins. You can change to smaller margins with the class
+option \clsopt{smallmargins}\indexdef{smallmargins}.
+
+\subsection{Font}%
+\label{opt:font}
+
+The default font that is used in the tex files is Latin modern with serifs.
+This is different to usual latex documents that use Computer modern with
+serifs as default font, but the result is usually much better.   You can
+change the font with the class option \clsopt{font}\indexdef{font}.  The
+possibilities are shown in Table~\ref{tab:fontoption}.
+
+\begin{SCtable}
+  \captiont{Font values.}{The values that the class option \quo{font} can have.}%
+  \label{tab:fontoption}
+    \begin{tabular}{l l}
+        \toprule
+        \tblhead{Value} & \tblhead{Font used}\\
+        \midrule
+        lm  & Latin modern without serifs \\
+        lms & Latin modern with serifs (default)\\
+        cm  & Computer modern without serifs\\
+        cms & Computer modern with serifs\\
+        \bottomrule
+    \end{tabular}
+\end{SCtable}
+
+
+\subsection{Chapter Design}%
+\label{sub:chapterdesign}
+
+There are many different possibilities for chapter page design. To change this,
+use the class option \clsopt{chapterstyle}.\indexdef{chapterstyle}.  An example
+of the possible designs is shown in
+Figures~\ref{fig:veelo}--\ref{fig:wilsondob}. However, you could use any design
+of the \emph{Memoir} class shown in \citep[P:383-396]{wilson2018memoir}. The
+default value is the \emph{veelo} style, which has a mini \abb{ToC} within
+each start page of a new chapter.
+
+
+\begin{figure}
+    \includegraphics[scale=0.6]{veelo.pdf}
+    \captiont{Veelo page style example.}{%
+        An example how the veelo page style look with a mini \abb{ToC}}%
+    \label{fig:veelo}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[scale=0.6]{default.pdf}
+    \captiont{Default page style example.}{%
+        An example how the default page style look with a mini \abb{ToC}}
+
+\end{figure}
+
+\begin{figure}
+    \includegraphics[scale=0.6]{bianchi.pdf}
+    \captiont{Bianchi page style example.}{%
+        An example how the bianchi page style look with a mini \abb{ToC}}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[scale=0.6]{dash.pdf}
+    \captiont{Dash page style example.}{%
+        An example how the dash page style look with a mini \abb{ToC}}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[scale=0.6]{ell.pdf}
+    \captiont{Ell page style example.}{%
+        An example how the ell page style look with a mini \abb{ToC}}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[scale=0.6]{wilsondob.pdf}
+    \captiont{Wilsondob page style example.}{%
+        An example how the wilsondob page style look with a mini \abb{ToC}}%
+    \label{fig:wilsondob}
+\end{figure}
+
+
+\section{Common Typographic Mistakes}
+
+While \LaTeX{} is designed to generate documents with a high typographic
+quality, there are a few common pitfalls that authors have to be aware of to
+avoid unexpected or unpleasant results. Here, some of the most relevant tricky
+details to keep in mind are described.
+
+\subsection{Logical Markup}
+One of the most important rules to achieve a consistent typography in your \LaTeX{}
+documents is to consequently use \emph{logical markup} like \verb!\emph! (for
+emphasis) or \verb!\email! (for an email address) instead of directly styling
+the text with low-level directives like, \eg, \verb!\textit! (for italic text)
+or \verb!\tiny! (for small a font size). Logical markup means that you apply a
+command to a piece of text that describes \emph{what it is}, and not what it
+looks like. For example, a file name is often typeset in typewriter font.
+However, instead of directly using \verb!\texttt{the_name}!  to achieve this,
+it is better to define a command \verb!\file{}! for this purpose and use
+\verb!\file{the_name}!. This has multiple benefits: (1) All file names using
+this command will look identically, and you do not need to remember the exact
+style. (2) You can easily change the style later by simply changing definition
+of the logical markup command. (3) A custom command may be shorter than the
+basic \LaTeX{} commands, especially if you have to use multiple ones to
+achieve the desired look. (4) You can simply find all file names etc.\ in the
+document by searching for the respective logical markup command. In case you
+want to get rid of a logical markup command later, you can usually simply
+replace all occurrences using a regular expression substitution.
+
+To define your logical markup commands, use the \verb!\newcommand! command.
+User-defined commands should be defined in file \file{misc/custom\_defs.tex}.
+It already contains pre-defined commands for the most common text elements in
+our fields, \eg \verb!\species! for species names, \verb!\prog! for computer
+program names, and \verb!\cmd! for shell commands and code. For a complete
+list, refer to \autoref{tab:logical_markup}. Of course, you can extend the
+list or change the styles if you like.
+
+\begin{SCtable}
+    \centering
+    \caption{%
+        List of the default logical markup commands, which are defined in
+        \file{misc/custom\_defs.tex}.
+    }%
+    \label{tab:logical_markup}
+    \begin{tabular}{l l}
+        \toprule
+        \tblhead{Command} & \tblhead{Description} \\
+        \midrule
+        \verb!\species! & species name \\
+        \verb!\seq!     & DNA/RNA sequence \\
+        \verb!\file!    & file name \\
+        \verb!\cmd!     & code or command \\
+        \verb!\prog!    & program name \\
+        \verb!\email!   & email address \\
+        \verb!\quo!     & quotation marks \\
+        \verb!\tblhead! & table headers \\
+        \verb!\pkg!     & software package/module \\
+        \bottomrule
+    \end{tabular}
+\end{SCtable}
+
+\subsection{Spaces}
+Inter-word spaces are a common source of typographic mistakes.  This is mainly
+because, in \LaTeX, not every space has the same size. Most notably, it
+increases the space after a period (\quo{\,.\,}), which is usually good as it
+helps to visually separate different sentences. However, the period is also
+used to mark abbreviations, which leads to wrong spacing as, \eg, in Mr. A.
+Brown. The solution is to escape the following space, as in Mr.\ A.\ Brown
+(using the code \verb!Mr.\ A.\ Brown!).
+
+When defining a command which ends in a period, you do not know whether there
+will be a space after it or not. In such cases, the sequence \verb!\@! can be
+used to disable the increased size of a space that will possibly follow. For
+example, \verb!\newcommand{\dr}{Dr.\@}! defines the command \verb!\dr!, which
+is then displayed as Dr.\@ with correct spacing.
+
+Beside regular spaces, \LaTeX{} also offers the command \verb!\,! to generate
+half spaces. They are useful to group digits like 1\,500\,000 or to typeset
+abbreviations consisting of multiple words like w.\,r.\,t.\ (\quo{with respect
+to}), which looks much better than both w.\ r.\ t.\ (using full spaces) or
+w.r.t.\ (using no spaces).
+
+Another variety of the normal space is the \emph{unbreakable} space, written
+as tilde character (\verb!~!). It has the same size as a regular space, but
+prevents the line from being broken at this specific point. This is useful for
+groups of text elements that belong together and should not be separated, for
+example a title and a name like Mr.~Brown, or to prevent that abbreviations
+followed by a period end a line and thus confuse the reader as it looks as
+though the period ends the sentence.
+
+A final recommendation is related to the somewhat surprising behaviour of
+\LaTeX{} when it comes to spaces following commands. Using a command without
+any arguments like \verb!\dr! defined above \quo{swallows} the following
+space, \ie it will print Dr.and no space after it like so. To fix this, either
+use \verb!\dr{}!, or use the \verb!\xspace! command from the \pkg{xspace}
+package in the definition: \verb!\newcommand{\dr}{Dr.\@\xspace}!. It will
+expand to a space only when needed and not, \eg, when used within parentheses.
+The pre-defined markup commands in \file{misc/custom\_defs.tex} showcase the
+use of \verb!\xspace!.
+
+\subsection{Quotation Marks}
+
+In short: always use the \verb!\quo{}! command to quote your text like
+\quo{this}.
+
+While using proper quotation marks like \quo{these} seems to be easy at a
+first glance, it turns out to be a complex matter. First, one should realize
+that the double quote character " looks horrid and should never be used in a
+\LaTeX{} text. Instead, two backticks (\verb!``!) and two apostrophes
+\verb!''! are used to create correct double quotation marks as in the first
+sentence. Note how the opening and closing marks differ slightly. To make
+things worse, quotation marks are language-specific, so in the German
+Zusammenfassung, you would for instance use \glqq{}diese Art von\grqq{}
+quotation marks.  Since this is easy to get wrong, this thesis class properly
+sets up the language settings for the respective parts and provides the
+command \verb!\enquote{text}! from the package \pkg{csquotes}, as well as the
+shorthand \verb!\quo{text}!. Using this command is not only convenient and
+guaranteed to produce correct results, it also handles edge cases like inner
+and outer quotes: \quo{\quo{Hello,} he said.}
+
+\subsection{Dashes}
+
+Texts contain a wide variety of dashes---\ie horizontal lines---that have
+different lengths depending on their function. To insert partial sentences
+that could also be surrounded by commas or parentheses, or to append them as
+if following a semicolon, the \emph{em-dash} (German Geviertstrich) is used.
+It is named after the widest letter M.  In \LaTeX{}, it is typeset using three
+dash characters (\verb!---!).  The first sentence of this section demonstrates
+its usage. The shorter \emph{en-dash} (German Halbgeviertstrich), has half the
+size of an em-dash. It can be typeset using two dashes (\verb!--!). It is used
+to indicate ranges (\eg 10--15 minutes), or for compound nouns as in
+Watson--Crick base pair or protein--protein interaction. The shortest dash is
+the hyphen (German Viertelgeviertstrich), written simply as \verb!-! in the
+code. It is used to hyphenate words at the end of lines, or for compound
+adjectives like \quo{fast-growing} and sometimes for prefixes like in
+\quo{re-evaluate}.
+
+To get correctly sized minus signs, always set negative numbers in a math
+environment: $-5$ (code: \verb!$-5$!) and not -5.
+
+\subsection{Position Specifiers of Floats}
+
+Do not overuse position specifiers of floats environments. For example, the
+figure environment allows to pass the specifiers h (\emph{here}), t
+(\emph{top}), and b (\emph{bottom}) as in \verb!\begin{figure}[htb]!. Do not
+use them unless you have a good reason. Do not add them to all of your figures
+by default. \LaTeX{} usually does a good job finding a suitable position on
+its own. If you feel you have to add specifiers, do it when you are close to
+finishing that chapter, when you have already included all other figures, or
+you may get surprising results.
+
+\subsection{Tables}
+
+Instead of using \verb!\hrule! to draw horizontal lines in tables, use
+\verb!\toprule!, \verb!\midrule!, and \verb!\bottomrule! as in the tables of
+this manual, \eg~\autoref{tab:logical_markup}. Do not overuse these commands
+as too many lines will only clutter your table, but not benefit its
+readability.
+
+
+% End of chapters/chapter_1.tex

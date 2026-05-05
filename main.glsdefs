@@ -1,0 +1,551 @@
+\glsdefs@newdocentry{index:smallmargins}%
+{%
+name={smallmargins},%
+sort={smallmargins},%
+type={margin},%
+first={smallmargins},%
+firstplural={smallmarginss},%
+text={smallmargins},%
+plural={smallmarginss},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:font}%
+{%
+name={font},%
+sort={font},%
+type={margin},%
+first={font},%
+firstplural={fonts},%
+text={font},%
+plural={fonts},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:chapterstyle}%
+{%
+name={chapterstyle},%
+sort={chapterstyle},%
+type={margin},%
+first={chapterstyle},%
+firstplural={chapterstyles},%
+text={chapterstyle},%
+plural={chapterstyles},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:bibversion}%
+{%
+name={bibversion},%
+sort={bibversion},%
+type={margin},%
+first={bibversion},%
+firstplural={bibversions},%
+text={bibversion},%
+plural={bibversions},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:nostatistics}%
+{%
+name={nostatistics},%
+sort={nostatistics},%
+type={margin},%
+first={nostatistics},%
+firstplural={nostatisticss},%
+text={nostatistics},%
+plural={nostatisticss},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:baseonauthorstyle}%
+{%
+name={baseonauthorstyle},%
+sort={baseonauthorstyle},%
+type={margin},%
+first={baseonauthorstyle},%
+firstplural={baseonauthorstyles},%
+text={baseonauthorstyle},%
+plural={baseonauthorstyles},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:abstractpath}%
+{%
+name={abstractpath},%
+sort={abstractpath},%
+type={margin},%
+first={abstractpath},%
+firstplural={abstractpaths},%
+text={abstractpath},%
+plural={abstractpaths},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:zusammenpath}%
+{%
+name={zusammenpath},%
+sort={zusammenpath},%
+type={margin},%
+first={zusammenpath},%
+firstplural={zusammenpaths},%
+text={zusammenpath},%
+plural={zusammenpaths},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:acknowledgmentspath}%
+{%
+name={acknowledgmentspath},%
+sort={acknowledgmentspath},%
+type={margin},%
+first={acknowledgmentspath},%
+firstplural={acknowledgmentspaths},%
+text={acknowledgmentspath},%
+plural={acknowledgmentspaths},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:nominitoc}%
+{%
+name={nominitoc},%
+sort={nominitoc},%
+type={margin},%
+first={nominitoc},%
+firstplural={nominitocs},%
+text={nominitoc},%
+plural={nominitocs},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:smallautoref}%
+{%
+name={smallautoref},%
+sort={smallautoref},%
+type={margin},%
+first={smallautoref},%
+firstplural={smallautorefs},%
+text={smallautoref},%
+plural={smallautorefs},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:definitionindex}%
+{%
+name={definitionindex},%
+sort={definitionindex},%
+type={margin},%
+first={definitionindex},%
+firstplural={definitionindexs},%
+text={definitionindex},%
+plural={definitionindexs},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:maxdis}%
+{%
+name={maxdis},%
+sort={maxdis},%
+type={margin},%
+first={maxdis},%
+firstplural={maxdiss},%
+text={maxdis},%
+plural={maxdiss},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:minted}%
+{%
+name={minted},%
+sort={minted},%
+type={margin},%
+first={minted},%
+firstplural={minteds},%
+text={minted},%
+plural={minteds},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:figlist}%
+{%
+name={figlist},%
+sort={figlist},%
+type={margin},%
+first={figlist},%
+firstplural={figlists},%
+text={figlist},%
+plural={figlists},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:tablist}%
+{%
+name={tablist},%
+sort={tablist},%
+type={margin},%
+first={tablist},%
+firstplural={tablists},%
+text={tablist},%
+plural={tablists},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:fullcitename}%
+{%
+name={fullcitename},%
+sort={fullcitename},%
+type={margin},%
+first={fullcitename},%
+firstplural={fullcitenames},%
+text={fullcitename},%
+plural={fullcitenames},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:bibtex}%
+{%
+name={bibtex},%
+sort={bibtex},%
+type={margin},%
+first={bibtex},%
+firstplural={bibtexs},%
+text={bibtex},%
+plural={bibtexs},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+
+\glsdefs@newdocentry{index:bibauthorstyle}%
+{%
+name={bibauthorstyle},%
+sort={bibauthorstyle},%
+type={margin},%
+first={bibauthorstyle},%
+firstplural={bibauthorstyles},%
+text={bibauthorstyle},%
+plural={bibauthorstyles},%
+description={\nopostdesc },%
+descriptionplural={\nopostdesc },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+nonumberlist={false},%
+%
+}%
+

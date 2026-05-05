@@ -1,0 +1,23 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.1}Welcome}{\reset@font\mtcSfont 4}{section.1.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.1}Disclaimer}{\reset@font\mtcSSfont 4}{subsection.1.1.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.2}This Manual}{\reset@font\mtcSSfont 4}{subsection.1.1.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.2}Double-sided Print}{\reset@font\mtcSfont 5}{section.1.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.3}File Structure}{\reset@font\mtcSfont 5}{section.1.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.4}How to Compile It}{\reset@font\mtcSfont 6}{section.1.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.1}Configuring \textit {latexmk}}{\reset@font\mtcSSfont 6}{subsection.1.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.2}Makefile}{\reset@font\mtcSSfont 6}{subsection.1.4.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.3}Dependencies and Compiling at the Bioinf Institute}{\reset@font\mtcSSfont 7}{subsection.1.4.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.5}The Main File}{\reset@font\mtcSfont 8}{section.1.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.1}Preamble}{\reset@font\mtcSSfont 8}{subsection.1.5.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.2}Document Body}{\reset@font\mtcSSfont 8}{subsection.1.5.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.6}Base Settings}{\reset@font\mtcSfont 8}{section.1.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.1}Margins}{\reset@font\mtcSSfont 8}{subsection.1.6.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.2}Font}{\reset@font\mtcSSfont 9}{subsection.1.6.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.3}Chapter Design}{\reset@font\mtcSSfont 9}{subsection.1.6.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.7}Common Typographic Mistakes}{\reset@font\mtcSfont 9}{section.1.7}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.7.1}Logical Markup}{\reset@font\mtcSSfont 9}{subsection.1.7.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.7.2}Spaces}{\reset@font\mtcSSfont 16}{subsection.1.7.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.7.3}Quotation Marks}{\reset@font\mtcSSfont 17}{subsection.1.7.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.7.4}Dashes}{\reset@font\mtcSSfont 17}{subsection.1.7.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.7.5}Position Specifiers of Floats}{\reset@font\mtcSSfont 17}{subsection.1.7.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.7.6}Tables}{\reset@font\mtcSSfont 18}{subsection.1.7.6}}

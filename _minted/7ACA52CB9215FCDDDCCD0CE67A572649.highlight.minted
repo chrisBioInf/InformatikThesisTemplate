@@ -1,0 +1,17 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}SCtable\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}captiont}\PYG{n+nb}{\PYGZob{}}Font values.\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{n+nb}{\PYGZob{}}The values that the class option \PYG{k}{\PYGZbs{}quo}\PYG{n+nb}{\PYGZob{}}font\PYG{n+nb}{\PYGZcb{}} can have.\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}tab:fontoption\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tabular\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}l r\PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}toprule}
+        \PYG{k}{\PYGZbs{}tblhead}\PYG{n+nb}{\PYGZob{}}Value\PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}tblhead}\PYG{n+nb}{\PYGZob{}}Used Font\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}\PYGZbs{}}
+        \PYG{k}{\PYGZbs{}midrule}
+        lm  \PYG{n+nb}{\PYGZam{}} Latin modern without serifs (default)\PYG{k}{\PYGZbs{}\PYGZbs{}}
+        lms \PYG{n+nb}{\PYGZam{}} Latin modern with serifs\PYG{k}{\PYGZbs{}\PYGZbs{}}
+        cm  \PYG{n+nb}{\PYGZam{}} Computer modern without serifs\PYG{k}{\PYGZbs{}\PYGZbs{}}
+        cms \PYG{n+nb}{\PYGZam{}} Computer modern with serifs\PYG{k}{\PYGZbs{}\PYGZbs{}}
+        \PYG{k}{\PYGZbs{}bottomrule}
+    \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tabular\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}SCtable\PYG{n+nb}{\PYGZcb{}}
+\end{MintedVerbatim}

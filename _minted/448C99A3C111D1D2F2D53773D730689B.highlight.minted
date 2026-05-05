@@ -1,0 +1,22 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+@article\PYG{n+nb}{\PYGZob{}}van2000art,
+    title=\PYG{n+nb}{\PYGZob{}}The art of writing a scientific article\PYG{n+nb}{\PYGZcb{}},
+    author=\PYG{n+nb}{\PYGZob{}}Van der Geer, J and Hanraads, JAJ and Lupton, RA\PYG{n+nb}{\PYGZcb{}},
+    AUTHOR+an = \PYG{n+nb}{\PYGZob{}}1=underlinebase,firstauthor;2=firstauthor\PYG{n+nb}{\PYGZcb{}},
+    journal=\PYG{n+nb}{\PYGZob{}}J. Sci. Commun\PYG{n+nb}{\PYGZcb{}},
+    volume=\PYG{n+nb}{\PYGZob{}}163\PYG{n+nb}{\PYGZcb{}},
+    number=\PYG{n+nb}{\PYGZob{}}2\PYG{n+nb}{\PYGZcb{}},
+    pages=\PYG{n+nb}{\PYGZob{}}51\PYGZhy{}\PYGZhy{}59\PYG{n+nb}{\PYGZcb{}},
+    year=\PYG{n+nb}{\PYGZob{}}2000\PYG{n+nb}{\PYGZcb{}},
+\PYG{n+nb}{\PYGZcb{}}
+@misc\PYG{n+nb}{\PYGZob{}}web:promotion2,
+    author = \PYGZdq{}\PYG{n+nb}{\PYGZob{}}Fakultät für Mathematik und Informatik\PYG{n+nb}{\PYGZcb{}}\PYGZdq{},
+    AUTHOR+an = \PYG{n+nb}{\PYGZob{}}1=underlineall\PYG{n+nb}{\PYGZcb{}},
+    title = \PYGZdq{}Erste Änderungssatzung zur Promotionsordnung Fakultät für
+              Mathematik und Informatik\PYGZdq{},
+    year = \PYGZdq{}2017\PYGZdq{},
+    howpublished = \PYGZdq{}\PYG{k}{\PYGZbs{}url}\PYG{n+nb}{\PYGZob{}}http://db.uni\PYGZhy{}leipzig.de/bekanntmachung/
+                          dokudownload.php?dok\PYG{n+nb}{\PYGZus{}}id=5033\PYG{n+nb}{\PYGZcb{}}\PYGZdq{},
+    note = \PYGZdq{}[Online; accessed 27\PYGZhy{}August\PYGZhy{}2018]\PYGZdq{},
+\PYG{n+nb}{\PYGZcb{}}
+\end{MintedVerbatim}

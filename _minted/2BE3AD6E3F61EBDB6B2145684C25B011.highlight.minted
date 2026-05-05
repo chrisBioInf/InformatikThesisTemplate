@@ -1,0 +1,11 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}sym}\PYG{n+nb}{\PYGZob{}}C\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}The circumference of a cycle.\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}sym}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}pi}\PYG{n+nb}{\PYGZcb{}}[kreis]\PYG{n+nb}{\PYGZob{}}Ratio of a circle\PYGZsq{}s
+    circumference to its diameter.\PYG{n+nb}{\PYGZcb{}}
+We use the new cool symbol in math
+\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}symkreis}\PYG{n+nb}{ }\PYG{o}{=}\PYG{n+nb}{ }\PYG{l+m}{3}\PYG{n+nb}{.}\PYG{l+m}{14}\PYG{n+nv}{\PYGZbs{}dots}\PYG{l+s}{\PYGZdl{}} and in text \PYG{k}{\PYGZbs{}symkreis}.
+
+\PYG{k}{\PYGZbs{}operatorsym}\PYG{n+nb}{\PYGZob{}}lca\PYG{n+nb}{\PYGZcb{}}[lca]\PYG{n+nb}{\PYGZob{}}The last common ancestor.\PYG{n+nb}{\PYGZcb{}}
+Let \PYG{k}{\PYGZbs{}symlca} be the last common ancestor. When \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{v}\PYG{l+s}{\PYGZdl{}} has
+two children \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{u}\PYG{l+s}{\PYGZdl{}} and \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{w}\PYG{l+s}{\PYGZdl{}} then is \PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}symlca}\PYG{o}{(}\PYG{n+nb}{u,w}\PYG{o}{)}\PYG{o}{=}\PYG{n+nb}{v}\PYG{l+s}{\PYGZdl{}}.
+\end{MintedVerbatim}

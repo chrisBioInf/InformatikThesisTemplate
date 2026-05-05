@@ -1,0 +1,10 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}defabb}\PYG{n+nb}{\PYGZob{}}DAG\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}Directed Acyclic Graph\PYG{n+nb}{\PYGZcb{}}
+The life is a \PYG{k}{\PYGZbs{}abb}\PYG{n+nb}{\PYGZob{}}DAG\PYG{n+nb}{\PYGZcb{}}.
+\PYG{c}{\PYGZpc{}The life is a Directed Acyclic Graph (DAG).}
+Many \PYG{k}{\PYGZbs{}abbs}\PYG{n+nb}{\PYGZob{}}DAG\PYG{n+nb}{\PYGZcb{}} together create a \PYG{k}{\PYGZbs{}abb}\PYG{n+nb}{\PYGZob{}}DAG\PYG{n+nb}{\PYGZcb{}}.
+\PYG{c}{\PYGZpc{}Many DAGs together create a DAG.}
+\PYG{k}{\PYGZbs{}defabb}\PYG{n+nb}{\PYGZob{}}SV\PYG{n+nb}{\PYGZcb{}}[SVs]\PYG{n+nb}{\PYGZob{}}Super Vertex\PYG{n+nb}{\PYGZcb{}}[Super Vertices]
+\PYG{k}{\PYGZbs{}abbs}\PYG{n+nb}{\PYGZob{}}SV\PYG{n+nb}{\PYGZcb{}}
+\PYG{c}{\PYGZpc{}Super Vertices (SVs)}
+\end{MintedVerbatim}

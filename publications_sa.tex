@@ -1,0 +1,31 @@
+% Stand-alone version of the curriculum scientiae.
+\documentclass[
+%   font=lms,               % text font (lm: latin modern, lms: with serifs)
+%   infopath=/path/to/thesis_info,  % custom path to thesis information file
+%   smallautoref,           % let autorefs have a small first letter
+%   bibtex,                 % use bibtex/natbib instead of biblatex/biber
+%   todo=margin,            % set type of todo notes (margin, plain, off)
+%   smallmargins,           % reduce margin size and increase text width
+%   bibauthorstyle=fggf,    % set the biblatex authorstyle.
+]{UniLeipzigBioinfThesisSA}
+\addglobalbib{misc/literature.bib}
+
+% Re-style the header: remove the thesis title.
+% \makeoddhead{plain}{\mdseries\sffamily\hfill\upshape\authorname}{}{}
+% \makeoddhead{headings}{\mdseries\sffamily\hfill\upshape\thepage}{}{}
+
+% Underline annotated authors as in the "based on" bibliography.
+\setcounter{itisfrontmatter}{1}
+
+\begin{document}
+    % Add citation keys for papers that are to be printed here. Set them in
+    % the thesis information file.
+    \nocite{\publist}
+    %
+    \printthebibliography[List of Publications]
+    %
+    % Add footnote text for shared authorship if required.
+    \ifnum\value{sharedfirstauthor}=1%
+        \footnotetext[1]{The authors share first authorship.}%
+    \fi
+\end{document}

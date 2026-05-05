@@ -1,0 +1,572 @@
+\NeedsTeXFormat{LaTeX2e}[1996/12/01]
+\ProvidesPackage{UniLeipzigBioinfThesisCommon}[2018/08/03 v0.1 Uni Leipzig Bioinformatik Thesis Template]
+
+% Load packages required for functionality of this file.
+\RequirePackage[utf8]{inputenc} % support unicode characters
+\RequirePackage{xparse}         % for \NewDocumentCommand
+\RequirePackage{etoolbox}       % for \ifdefstring etc.
+\RequirePackage{tabularx}       % for cs categories
+\RequirePackage{marginnote}     % for \marginnote
+\RequirePackage{kvoptions}      % for option parsing
+
+% Parse options.
+\SetupKeyvalOptions{prefix=BioinfThesisCmn@}
+\DeclareStringOption[lms]{font}%Change font
+\DeclareStringOption[fggf]{bibauthorstyle}%Change bib authorstyle
+\DeclareBoolOption[false]{smallautoref}%Change the autoref to first small letter
+\DeclareBoolOption[false]{bibtex}%Use bibtex instead of biblatex
+\DeclareBoolOption[false]{noglossary}%Don't use glossary package
+\DeclareBoolOption[false]{fullcitename}%Activate first name in bibliogtaphy
+\DeclareBoolOption[false]{definitionindex}%Activate to create defintion index
+% to add: bibauthorstyle smallmargins maxdis
+
+\ProcessKeyvalOptions*
+
+% Load additional packages.
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{amsfonts}
+\RequirePackage{amssymb}
+\RequirePackage{microtype}
+\RequirePackage[autostyle]{csquotes}
+\RequirePackage[ngerman,english]{babel} % required for correct hyphenation etc.
+\RequirePackage{blindtext}
+\RequirePackage{xcolor}
+\RequirePackage{graphicx}               % required to include images
+\RequirePackage[hidelinks]{hyperref}    % enable hyperlinks
+
+% Command to remove line breaks in the user-defined variables (e.g. titles).
+\newcommand{\BioinfThesisCmn@rmbreaks}[1]{%
+    \begingroup%
+        \def\\{}%
+        \def\newline{}%
+        \def\linebreak{}%
+        #1%
+    \endgroup%
+}
+
+% Commands to define author & thesis information
+\newcommand{\settitle}[1]{%
+    \newcommand{\ttitlewithbreaks}{#1}%
+    \newcommand{\ttitle}{\BioinfThesisCmn@rmbreaks{#1}}%
+}
+\newcommand{\setsubtitle}[1]{%
+    \newcommand{\subtitlewithbreaks}{#1}%
+    \newcommand{\subtitle}{\BioinfThesisCmn@rmbreaks{#1}}%
+}
+\newcommand{\setauthor}[1]{\newcommand{\authorname}{#1}}
+\newcommand{\setauthortitle}[1]{\newcommand{\authortitle}{#1}}
+\newcommand{\setauthordegree}[1]{\newcommand{\authordegree}{#1}}
+\newcommand{\setkeywords}[1]{\newcommand{\keywords}{#1}}
+\newcommand{\setdayofbirth}[1]{\newcommand{\dayofbirth}{#1}}
+\newcommand{\setbirthplace}[1]{\newcommand{\birthplace}{#1}}
+\newcommand{\setfilingdate}[1]{\newcommand{\filingdate}{#1}}
+
+\newcommand{\setfirstreviewer}[1]{\newcommand{\firstreviewer}{#1}}
+\newcommand{\setsecondreviewer}[1]{\newcommand{\secondreviewer}{#1}}
+\newcommand{\setdayofdefens}[1]{\newcommand{\dayofdefens}{#1}}
+\newcommand{\setgrade}[1]{\newcommand{\grade}{#1}}
+
+\newcommand{\setdedication}[1]{\newcommand{\dedication}{#1}}
+\newcommand{\setbase}[1]{\newcommand{\basedon}{#1}}
+\newcommand{\setpublist}[1]{\newcommand{\publist}{#1}}
+
+%Categories and entries of the Curriculum Scientae.
+% Env cscategory: mandatoriy arg: heading. optional arg: width of first column
+\newenvironment{cscategory}[2][9em]{%
+    \noindent%
+    \minipage{\textwidth}%              % make categories unbreakable
+    {\huge\sffamily #2}%
+    \vspace{2pt}\hrule\vspace{5pt}%
+    \tabularx{\linewidth}{p{#1}@{\hspace{6mm}}X}%
+}{%
+    \endtabularx%
+    \vspace{1cm}\\%
+    \endminipage%
+}
+\newcommand{\cscategoryblock}[1]{\parbox{\textwidth}{\begin{cscategory}{#1}\end{cscategory}}}
+\NewDocumentCommand{\csentry}{mmo}{#1&#2\IfNoValueF{#3}{\par#3}\\}
+\newcommand{\bull}{\par\hspace*{1.3em}\textbullet\hspace{0.6em}}
+
+% Make declaration at the end of the thesis.
+\newcommand{\makedeclaration}{
+    \cleardoublepage
+    \begin{otherlanguage}{ngerman}
+        % The 2cm hspace are currently required due to the compensation of
+        % -2cm required for the rest of the odd thesis header, cf.
+        %  \makeoddhead in UniLeipzigBioinfThesis.cls.
+        \markboth{Selbstständigkeitserklärung}{\hspace{2cm}Selbstständigkeitserklärung}
+        \chapter*{Selbstständigkeitserklärung}
+        \vspace*{0.07\textheight}
+        {%
+            \noindent\large
+            Hiermit erkläre ich, die vorliegende Dissertation selbstständig
+            und ohne unzulässige fremde Hilfe angefertigt zu haben. Ich habe
+            keine anderen als die angeführten Quellen und Hilfsmittel benutzt
+            und sämtliche Textstellen, die wörtlich oder sinngemäß aus
+            veröffentlichten oder unveröffentlichten Schriften entnommen
+            wurden, und alle Angaben, die auf mündlichen Auskünften beruhen,
+            als solche kenntlich gemacht. Ebenfalls sind alle von anderen
+            Personen bereitgestellten Materialien oder erbrachten
+            Dienstleistungen als solche gekennzeichnet.
+        }
+        \vfill
+
+        \noindent
+        \rule[0.5em]{25em}{0.5pt}
+
+        \noindent Ort, Datum
+        \vspace{15mm}
+
+        \noindent
+        \rule[0.5em]{25em}{0.5pt}
+
+        \noindent
+        Unterschrift
+    \end{otherlanguage}
+}
+
+% Set biblatex name style, i.e. order of first/given names.
+\newcommand{\setbiblatexnamestyle}[1]{
+    \ifdefstring{#1}{fg}{%
+        \DeclareNameAlias{author}{family-given}
+    }{%
+        \ifdefstring{#1}{gf}{%
+            \DeclareNameAlias{author}{given-family}
+        }{%
+            \ifdefstring{#1}{fggf}{%
+                \DeclareNameAlias{author}{%
+                    family-given/given-family}
+            }{%
+                \PackageError{UniLeipzigBioinfThesisCommon.sty}{%
+                    Unknown value `#1' in command setbiblatexnamestyle}{}
+            }
+        }
+    }
+}
+
+% Configure biblatex to (1) prevent DOIs/URLs from running into the margin and
+% (2) to interpret underline annotations in the bib files.
+\newcounter{itisfrontmatter}    % make sure counter exists
+\newcounter{sharedfirstauthor}
+\newcommand{\configurebiblatex}{
+    % Prevent URLs/DOIs in bibliography from running into margin:
+    \setcounter{biburlnumpenalty}{9000}
+    \setcounter{biburllcpenalty}{9000}
+    \setcounter{biburlucpenalty}{9000}
+
+    \newcommand{\hight}[1]{%
+        \ifnum\value{itisfrontmatter}=1%
+            \ifitemannotation{underlinebase}{%
+                \underline{##1}%
+            }{%
+                \ifitemannotation{underlineall}{%
+                    \underline{##1}%
+                }{%
+                    ##1%
+                }%
+            }%
+            \ifitemannotation{firstauthor}{%
+                \footnotemark[1]\setcounter{sharedfirstauthor}{1}%
+            }{}%
+        \else%
+            \ifitemannotation{underlineall}{%
+                \underline{##1}%
+            }{%
+                ##1%
+            }%
+        \fi%
+    }
+
+    \renewbibmacro*{name:family-given}[4]{%
+      \ifuseprefix{%
+        \usebibmacro{name:delim}{##3##1}%
+        \usebibmacro{name:hook}{##3##1}%
+        \ifdefvoid{##3}{}{%
+          \ifcapital{%
+            \mkbibnameprefix{\MakeCapital{##3}}\isdot%
+          }{%
+            \mkbibnameprefix{##3}\isdot%
+          }%
+          \ifprefchar{}{\bibnamedelimc}%
+        }%
+         \hight{%
+           \mkbibnamefamily{##1}\isdot%
+           \ifdefvoid{##4}{}{\bibnamedelimd\mkbibnamesuffix{##4}\isdot}%
+           \ifdefvoid{##2}{}{\revsdnamepunct\bibnamedelimd\mkbibnamegiven{##2}\isdot}%
+         }%
+      }{%
+        \usebibmacro{name:delim}{##1}%
+        \usebibmacro{name:hook}{##1}%
+        \hight{%
+          \mkbibnamefamily{##1}\isdot%
+          \ifdefvoid{##4}{}{\bibnamedelimd\mkbibnamesuffix{##4}\isdot}%
+          \ifboolexpe{%
+            test {\ifdefvoid{##2}}
+            and
+            test {\ifdefvoid{##3}}%
+          }{}{%
+            \revsdnamepunct%
+          }%
+          \ifdefvoid{##2}{}{\bibnamedelimd\mkbibnamegiven{##2}\isdot}%
+          \ifdefvoid{##3}{}{\bibnamedelimd\mkbibnameprefix{##3}\isdot}%
+        }%
+      }%
+    }
+
+    \renewbibmacro*{name:given-family}[4]{%
+      \usebibmacro{name:delim}{##2##3##1}%
+      \usebibmacro{name:hook}{##2##3##1}%
+      \hight{\ifdefvoid{##2}{}{\mkbibnamegiven{##2}\isdot\bibnamedelimd}%
+      \ifdefvoid{##3}{}{%
+        \mkbibnameprefix{##3}\isdot%
+        \ifprefchar{%
+        }{%
+          \ifuseprefix{\bibnamedelimc}{\bibnamedelimd}%
+        }%
+      }%
+      \mkbibnamefamily{##1}\isdot%
+      \ifdefvoid{##4}{}{\bibnamedelimd\mkbibnamesuffix{##4}\isdot}}
+    }%
+
+    % Set biblatex name style, i.e. order of first/given names.
+    \setbiblatexnamestyle{\BioinfThesisCmn@bibauthorstyle}
+}
+
+% Load bibliography package.
+\ifBioinfThesisCmn@bibtex%
+    \RequirePackage{natbib}
+    \RequirePackage{multibib}
+    \newcites{base}{This thesis is based on the following publications:}
+    \bibliographystyle{apalike}
+    \bibliographystylebase{apalike}
+    % Provide common commands for BibLaTeX compatibility
+    \newcommand{\addglobalbib}[1]{\newcommand{\bibfile}{#1}}
+\else%
+    \ifBioinfThesisCmn@fullcitename%
+        \RequirePackage[
+            style=authoryear-comp,
+            natbib=true,
+            dashed=false,
+            maxbibnames=10,
+        ]{biblatex}
+    \else%
+        \RequirePackage[
+            style=authoryear-comp,
+            natbib=true,
+            dashed=false,
+            maxbibnames=10,
+            giveninits=true,
+            uniquename=init,
+        ]{biblatex}
+    \fi
+    \configurebiblatex
+    \ifdefstring{\BioinfThesisCmn@font}{lm}{\renewcommand*{\mkbibacro}[1]{\emph{##1}}}{}
+\fi
+
+% Print the bibliography, optionally with a given title.
+\newcommand{\printthebibliography}[1][Bibliography]{%
+    \ifBioinfThesisCmn@bibtex%      % print using BibTeX
+        %\addto\captionsenglish{\renewcommand{\bibname}{#1}}     % set title
+        \renewcommand{\bibname}{#1}     % set title
+        \addcontentsline{toc}{section}{Bibliography}
+        \bibliography{\bibfile}
+    \else                           % print using BibLaTeX
+        \printbibliography[heading=bibintoc,title={#1}]
+    \fi
+}
+
+% Set up font packages.
+\newcommand{\BioinfThesisCmn@fontsetup}[1]{%
+    \ifdefstring{#1}{lm}%
+        {%
+            \RequirePackage{lmodern}%
+            \RequirePackage[T1]{fontenc}%
+            \renewcommand*\familydefault{\sfdefault}%
+        }{}
+    \ifdefstring{#1}{lms}%
+    {%
+        \RequirePackage{lmodern}%
+        \RequirePackage[T1]{fontenc}%
+    }{}
+    \ifdefstring{#1}{cm}%
+    {%
+        \renewcommand*\familydefault{\sfdefault}%
+    }{}
+}
+
+% Set up todo notes. Supports options margin, plain, and off.
+\newcommand{\BioinfThesisCmn@todosetup}[1]{%
+    \ifdefstring{#1}{margin}{
+        \RequirePackage{todonotes}
+        \let\marginpar\marginnote       % fixes todo notes in floats (figures/tabs)
+    }{
+        % Make empty pgfsyspdfmark command to prevent compile error when todonotes
+        % has been loaded before but option value is changed to another value.
+        \newcommand{\pgfsyspdfmark}[3]{}
+        \ifdefstring{#1}{plain}{
+            \newcommand{\todo}[1]{\begingroup\tiny\color{red}[##1]\endgroup}
+        }{
+            \ifdefstring{#1}{off}{
+                \newcommand{\todo}[1]{}
+            }{
+                \PackageError{UniLeipzigBioinfThesisCommon.sty}{%
+                    Unknown value `#1' for option `todo'}{%
+                    Supported values are `margin', `plain', and `off'.}
+            }
+        }
+    }
+}
+
+\newcommand{\BioinfThesisCmn@autorefsetup}[1]{%
+    \ifBioinfThesisCmn@smallautoref%
+        \addto\extrasenglish{   % this line is for babel support
+            \def\definitionautorefname{definition}
+            \def\propositionautorefname{proposition}
+            \def\corollaryautorefname{corollary}
+            \def\theoremautorefname{theorem}
+            \def\lemmaautorefname{lemma}
+            \def\sectionautorefname{section}
+            \def\subsectionautorefname{section}
+            \def\subsubsectionautorefname{section}
+            \def\figureautorefname{figure}
+            \def\tableautorefname{table}
+            \def\algorithmtautorefname{algorithm}
+            \def\listingautorefname{listing}
+            \def\appendixautorefname{appendix}
+        }
+    \else
+        \addto\extrasenglish{   % this line is for babel support
+            \def\definitionautorefname{Definition}
+            \def\propositionautorefname{Proposition}
+            \def\corollaryautorefname{Corollary}
+            \def\theoremautorefname{Theorem}
+            \def\lemmaautorefname{Lemma}
+            \def\sectionautorefname{Section}
+            \def\subsectionautorefname{Section}
+            \def\subsubsectionautorefname{Section}
+            \def\chapterautorefname{Chapter}
+            \def\paragraphautorefname{Paragraph}
+            \def\itemautorefname{Item}
+            \def\Hfootnoteautorefname{Footnote}
+            \def\pageautorefname{Page}
+            \def\algorithmtautorefname{Algorithm}
+            \def\listingautorefname{Listing}
+            \def\appendixautorefname{Appendix}
+        }
+    \fi
+}
+
+%Package for List of Symbols
+\RequirePackage[intoc]{nomencl}
+\renewcommand{\nomname}{List of Symbols}
+\renewcommand{\nomprefix}{}
+\makenomenclature
+
+% Functions for symbols
+\newcommand{\makesymbols}{
+    \cleardoublepage
+    \markboth{\nomname}{\nomname}
+    \printnomenclature
+}
+\RequirePackage{xspace}
+\NewDocumentCommand{\sym}{moomo}{%
+    \IfValueTF{#5}{%
+        \nomenclature[#5]{$#1$}{#4}%
+    }%
+    {%
+        \nomenclature{$#1$}{#4}%
+    }%
+    \IfValueTF{#2}{%
+        \IfValueTF{#3}{%
+            \expandafter\def\csname sym#2\endcsname{\ensuremath{#3}\xspace}%
+        }%
+        {%
+            \expandafter\def\csname sym#2\endcsname{\ensuremath{#1}\xspace}%
+        }%
+    }%
+
+}
+\NewDocumentCommand{\operatorsym}{moomo}{%
+    \IfValueTF{#4}{%
+        \nomenclature[#4]{$\operatorname{#1}$}{#4}%
+    }%
+    {%
+        \nomenclature{$\operatorname{#1}$}{#4}%
+    }%
+    \IfValueTF{#2}{%
+        \IfValueTF{#3}{%
+            \expandafter\def\csname sym#2\endcsname{%
+                \ensuremath{\operatorname{#3}}\xspace}%
+        }%
+        {%
+            \expandafter\def\csname sym#2\endcsname{%
+                \ensuremath{\operatorname{#1}}\xspace}%
+        }%
+    }%
+
+}
+
+\NewDocumentCommand{\macrosym}{mmomooooo}{%
+    \IfValueTF{#6}{%
+        \IfValueTF{#7}{%
+            \IfValueTF{#8}{%
+                \IfValueTF{#9}{%
+                    \expandafter\def\csname sym#2\endcsname##1##2##3##4##5{#1}%
+                    \expandafter\def\csname symT#2\endcsname##1##2##3##4##5{$#1$}%
+                    \IfValueTF{#3}{%
+                        \expandafter\nomenclature[#3]{$\csname sym#2\endcsname{#5}{#6}{#7}{#8}{#9}$}{#4}%
+                    }%
+                    {%
+                        \expandafter\nomenclature{$\csname sym#2\endcsname{#5}{#6}{#7}{#8}{#9}$}{#4}%
+                    }%
+                }%
+                {%
+                    \expandafter\def\csname sym#2\endcsname##1##2##3##4{#1}%
+                    \expandafter\def\csname symT#2\endcsname##1##2##3##4{$#1$}%
+                    \IfValueTF{#3}{%
+                        \expandafter\nomenclature[#3]{$\csname sym#2\endcsname{#5}{#6}{#7}{#8}$}{#4}%
+                    }%
+                    {%
+                        \expandafter\nomenclature{$\csname sym#2\endcsname{#5}{#6}{#7}{#8}$}{#4}%
+                    }%
+                }%
+            }%
+            {%
+                \expandafter\def\csname sym#2\endcsname##1##2##3{#1}%
+                \expandafter\def\csname symT#2\endcsname##1##2##3{$#1$}%
+                \IfValueTF{#3}{%
+                    \expandafter\nomenclature[#3]{$\csname sym#2\endcsname{#5}{#6}{#7}$}{#4}%
+                }%
+                {%
+                    \expandafter\nomenclature{$\csname sym#2\endcsname{#5}{#6}{#7}$}{#4}%
+                }%
+            }%
+        }%
+        {%
+            \expandafter\def\csname sym#2\endcsname##1##2{#1}%
+            \expandafter\def\csname symT#2\endcsname##1##2{$#1$}%
+            \IfValueTF{#3}{%
+                \expandafter\nomenclature[#3]{$\csname sym#2\endcsname{#5}{#6}$}{#4}%
+            }%
+            {%
+                \expandafter\nomenclature{$\csname sym#2\endcsname{#5}{#6}$}{#4}%
+            }%
+        }%
+    }%
+    {%
+        \expandafter\def\csname sym#2\endcsname##1{#1}%
+        \expandafter\def\csname symT#2\endcsname##1{$#1$}%
+        \IfValueTF{#3}{%
+            \expandafter\nomenclature[#3]{$\csname sym#2\endcsname{#5}$}{#4}%
+        }%
+        {%
+            \expandafter\nomenclature{$\csname sym#2\endcsname{#5}$}{#4}%
+        }%
+    }%
+}
+
+
+\newcommand{\allSymCats}[1]{}
+
+\NewDocumentCommand{\addSymbolCategory}{mm}{
+    \expandafter\let\csname oldsymcatcommand#1\endcsname=\allSymCats%
+    \renewcommand{\allSymCats}[1]{
+        \csname oldsymcatcommand#1\endcsname{##1}
+        \ifthenelse{\equal{##1}{#1}}{\item[\textbf{#2}]}{}
+    }
+}
+
+\def\initSymbolCategory{%
+    \renewcommand{\nomgroup}[1]{%
+        \allSymCats{##1}%
+    }
+}
+
+\AtEndPreamble{\initSymbolCategory}
+
+
+%Package for List of Abbreviations
+\ifBioinfThesisCmn@noglossary%
+    \NewDocumentCommand{\defabb}{omomo}{}}
+    \newcommand{\abb}[1]{#1}
+    \newcommand{\abbs}[1]{#1s}
+    \newcommand{\indexdef}[1]{\marginnote{\textbf{#1}}}
+    \newcommand{\indexbf}[1]{\textbf{#1}}
+
+\else
+    \RequirePackage[acronym,nomain,toc,nonumberlist,savewrites]{glossaries}
+    \glsdisablehyper
+    \ifBioinfThesisCmn@definitionindex%
+        \newglossary*{margin}{Definition Index}
+    \fi
+
+    \makeglossaries
+    %Def index commands
+    \newcommand{\indexnomn}[1]{%
+        \ifBioinfThesisCmn@definitionindex%
+            \newglossaryentry{index:#1}{type=margin,name={#1},description=\nopostdesc,nonumberlist=false}%
+            \glsadd{index:#1}%
+        \fi%
+    }
+    \newcommand{\indexdef}[1]{%
+        \leavevmode\marginnote{\textbf{#1}}\ignorespaces%
+        \indexnomn{#1}%
+    }
+    \newcommand{\indexbf}[1]{%
+        \textbf{#1}%
+        \indexnomn{#1}%
+    }
+
+
+    %Abbrevitaion commands
+    \newcommand{\helpabb}[1]{%
+        \ifnum \BioinfThesis@maxdis=0%
+        \else%
+            \@ifundefined{c@#1abb}{%
+                %\NewDocumentCounter[initial=-100]{#1abb}%
+                \newcounter{#1abb}%
+                \setcounter{#1abb}{-100}%
+            }{}%
+            \ifnum \numexpr\value{page}-\value{#1abb}\relax%
+            >%
+            \BioinfThesis@maxdis \glsreset{#1}\fi%
+            \setcounter{#1abb}{\value{page}}%
+        \fi%
+    }
+    %
+    \NewDocumentCommand{\defabb}{omomo}{%
+        \IfValueTF{#1}%
+        {%  % If given a label for the abbreviation, use it.
+            \def\abblabel{#1}
+        }%
+        {%  % Otherwise, simple use the short acronym as label.
+            \def\abblabel{#2}
+        }%
+        \IfValueTF{#3}%
+        {%
+            \IfValueTF{#5}%
+            {%
+                \newacronym[shortplural={#3},longplural={#5}]{\abblabel}{#2}{#4}
+            }%
+            {%
+                \newacronym[shortplural={#3}]{\abblabel}{#2}{#4}
+            }%
+        }%
+        {%
+            \IfValueTF{#5}%
+            {%
+                \newacronym[longplural={#5}]{\abblabel}{#2}{#4}
+            }%
+            {%
+                \newacronym{\abblabel}{#2}{#4}
+            }%
+        }
+    }
+    \newcommand{\abb}[1]{\helpabb{#1}\gls{#1}}
+    \newcommand{\abbs}[1]{\helpabb{#1}\glspl{#1}}
+\fi
+
+
+
+% End of File

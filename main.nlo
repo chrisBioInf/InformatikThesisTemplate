@@ -1,0 +1,7 @@
+\nomenclatureentry{The last common ancestor.$\operatorname {lca}$@[{$\operatorname {lca}$}]\begingroup The last common ancestor.\nomeqref {3.0}|nompageref}{30}
+\nomenclatureentry{C$\pi $@[{$\pi $}]\begingroup The ratio of a circle's circumference to its diameter.\nomeqref {3.0}|nompageref}{30}
+\nomenclatureentry{C$C$@[{$C$}]\begingroup The circumference of a cycle.\nomeqref {3.0}|nompageref}{30}
+\nomenclatureentry{G$\csname symvertexset\endcsname {G}$@[{$\csname symvertexset\endcsname {G}$}]\begingroup The vertex set of $G$\nomeqref {3.0}|nompageref}{32}
+\nomenclatureentry{G$\csname symedgeset\endcsname {G}$@[{$\csname symedgeset\endcsname {G}$}]\begingroup The vertex edge of $G$\nomeqref {3.0}|nompageref}{32}
+\nomenclatureentry{G$\csname symindsub\endcsname {S}{U}$@[{$\csname symindsub\endcsname {S}{U}$}]\begingroup Creates induced subgraph of $G$ with vertex set $U$ \nomeqref {3.0}|nompageref}{32}
+\nomenclatureentry{S$\csname symcardinality\endcsname {U}$@[{$\csname symcardinality\endcsname {U}$}]\begingroup The number of elements in set $U$\nomeqref {3.0}|nompageref}{32}

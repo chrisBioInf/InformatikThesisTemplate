@@ -1,0 +1,71 @@
+% misc/custom_defs.tex
+% Defining all custom commands in a dedicated file helps you to keep the main
+% file clean. You can also load and configure additional packages there.
+
+%-------------------------------------
+%       Additional packages
+%-------------------------------------
+% Here you can load other packages.
+
+\usepackage{xspace}             % smart space after custom commands
+% \usepackage[option1,option2]{coolpackage}
+
+
+%-------------------------------------
+%       Additional commands
+%-------------------------------------
+% Here you can define your own commands.
+
+%%%%% Logical markup
+% Commands to style logical elements of your text. Adapt to your preferences!
+\renewcommand{\titlegraphic}[1]{\vbox{\centering #1}}
+\newcommand{\species}[1]{\textit{#1}}       % species names in italics
+\newcommand{\seq}[1]{\texttt{#1}}           % RNA/DNA sequence
+\newcommand{\file}[1]{\texttt{#1}}          % file names
+\renewcommand{\cmd}[1]{\texttt{#1}}         % executable code and commands
+\newcommand{\prog}[1]{\textit{#1}}          % names of programs & packages
+\newcommand{\email}[1]{\href{mailto:#1}{\texttt{#1}}} % email with mailto link
+\newcommand{\quo}[1]{\enquote{#1}}          % quotation marks, dep. on language
+\newcommand{\tblhead}[1]{\textbf{#1}}       % header of tables
+\newcommand{\pkg}[1]{\texttt{#1}}           % LaTeX package
+\newcommand{\clsopt}[1]{\texttt{#1}}        % LaTeX class option
+
+
+%%%%% Abbreviations
+% Common abbreviations that are never spelled out. For domain-specific
+% abbreviations that should be added to the List of Abbreviations, use the
+% \defabb command instead!
+\newcommand{\vs}{\emph{vs.\@}\xspace}   % vs as in versus
+\newcommand{\eg}{e.\,g.\@\xspace}       % e.g. (for example)
+\newcommand{\zb}{z.\,B.\@\xspace}       % z.B. (zum Beispiel)
+\newcommand{\ie}{i.\,e.\@\xspace}       % i.e. (that is)
+\newcommand{\wrt}{w.\,r.\,t.\@\xspace}  % w.r.t. (with respect to)
+\newcommand{\cf}{cf.\@\xspace}          % cf. (see/refer to)
+\newcommand{\fivepr}{\ensuremath{5^\prime}\xspace}      % 5' (five prime)
+\newcommand{\threepr}{\ensuremath{3^\prime}\xspace}     % 3' (three prime)
+\defabb{ToC}{Table of Contents}
+\defabb{UTC}{Coordinated Universal Time}
+\defabb{DAG}{Directed Acyclic Graph}
+\defabb{mFAS}{minimum Feedback Arc Set}
+\defabb{SV}{Super Vertex}[Super Vertices]
+
+%%%%% Math
+% For custom operators and math commands.
+% \DeclareMathOperator{\var}{Var}             % variance
+% \DeclareMathOperator*{\argmin}{arg\,min}    % arg min
+
+
+%-------------------------------------
+%       Symbols & Categories
+%-------------------------------------
+% Here you can place your own symbols and categories, cf. the manual.
+
+%%%%% Categories
+\addSymbolCategory{C}{Cycle}
+\addSymbolCategory{T}{Tree}
+
+%%%%% Symbols
+% \sym{C}{The circumference of a cycle.}
+% \sym{\pi}[kreis]{The ratio of a circle's circumference to its diameter.}[C]
+
+% End of misc/custom_defs.tex

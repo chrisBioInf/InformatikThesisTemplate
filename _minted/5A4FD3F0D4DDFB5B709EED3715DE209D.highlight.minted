@@ -1,0 +1,15 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZpc{}Let G be the \PYGZsq{}graph\PYGZsq{} category.}
+\PYG{k}{\PYGZbs{}macrosym}\PYG{n+nb}{\PYGZob{}}V(\PYGZsh{}1)\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}vertexset\PYG{n+nb}{\PYGZcb{}}[G]\PYG{n+nb}{\PYGZob{}}The vertex set of \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{G}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[G]
+\PYG{k}{\PYGZbs{}macrosym}\PYG{n+nb}{\PYGZob{}}E(\PYGZsh{}1)\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}edgeset\PYG{n+nb}{\PYGZcb{}}[G]\PYG{n+nb}{\PYGZob{}}The vertex edge of \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{G}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[G]
+\PYG{k}{\PYGZbs{}macrosym}\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1[\PYGZsh{}2]\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}indsub\PYG{n+nb}{\PYGZcb{}}[G]\PYG{n+nb}{\PYGZob{}}Creates induced subgraph of \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{G}\PYG{l+s}{\PYGZdl{}}
+ with vertex set \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{U}\PYG{l+s}{\PYGZdl{}} \PYG{n+nb}{\PYGZcb{}}[S][U]
+\PYG{c}{\PYGZpc{}Let S be the \PYGZsq{}set\PYGZsq{} category.}
+\PYG{k}{\PYGZbs{}macrosym}\PYG{n+nb}{\PYGZob{}}\PYGZsh{}\PYGZsh{}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}cardinality\PYG{n+nb}{\PYGZcb{}}[S]\PYG{n+nb}{\PYGZob{}}The number of elements
+in set \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{U}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[U]
+
+When \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{D}\PYG{l+s}{\PYGZdl{}} is a directed graph and \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{U}\PYG{n+nv}{\PYGZbs{}subset}\PYG{n+nv}{\PYGZbs{}symvertexset}\PYG{n+nb}{\PYGZob{}}\PYG{n+nb}{D}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZdl{}} and
+\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{H}\PYG{o}{=}\PYG{n+nv}{\PYGZbs{}symindsub}\PYG{n+nb}{\PYGZob{}}\PYG{n+nb}{D}\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}\PYG{n+nb}{U}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZdl{}} have no cycles then is
+\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}symcardinality}\PYG{n+nb}{\PYGZob{}}\PYG{n+nv}{\PYGZbs{}symedgeset}\PYG{n+nb}{\PYGZob{}}\PYG{n+nb}{H}\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZcb{}}\PYG{n+nv}{\PYGZbs{}leq}\PYG{n+nv}{\PYGZbs{}frac}\PYG{n+nb}{\PYGZob{}}\PYG{l+m}{1}\PYG{n+nb}{\PYGZcb{}}
+\PYG{n+nb}{\PYGZob{}}\PYG{n+nv}{\PYGZbs{}symcardinality}\PYG{n+nb}{\PYGZob{}}\PYG{n+nb}{U}\PYG{n+nb}{\PYGZcb{}}\PYG{o}{(}\PYG{n+nv}{\PYGZbs{}symcardinality}\PYG{n+nb}{\PYGZob{}}\PYG{n+nb}{U}\PYG{n+nb}{\PYGZcb{}}\PYG{o}{\PYGZhy{}}\PYG{l+m}{1}\PYG{o}{)}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}.
+\end{MintedVerbatim}

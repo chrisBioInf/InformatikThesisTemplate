@@ -1,0 +1,90 @@
+\babel@toc {english}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {part}{\partnumberline {I}Introduction}{1}{part.1}%
+\contentsline {chapter}{\chapternumberline {1}Introduction}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Welcome}{4}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Disclaimer}{4}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}This Manual}{4}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Double-sided Print}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.3}File Structure}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}How to Compile It}{6}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Configuring \textit {latexmk}}{6}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Makefile}{6}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Dependencies and Compiling at the Bioinf Institute}{7}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}The Main File}{8}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Preamble}{8}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Document Body}{8}{subsection.1.5.2}%
+\contentsline {section}{\numberline {1.6}Base Settings}{8}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Margins}{8}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Font}{9}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Chapter Design}{9}{subsection.1.6.3}%
+\contentsline {section}{\numberline {1.7}Common Typographic Mistakes}{9}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Logical Markup}{9}{subsection.1.7.1}%
+\contentsline {subsection}{\numberline {1.7.2}Spaces}{16}{subsection.1.7.2}%
+\contentsline {subsection}{\numberline {1.7.3}Quotation Marks}{17}{subsection.1.7.3}%
+\contentsline {subsection}{\numberline {1.7.4}Dashes}{17}{subsection.1.7.4}%
+\contentsline {subsection}{\numberline {1.7.5}Position Specifiers of Floats}{17}{subsection.1.7.5}%
+\contentsline {subsection}{\numberline {1.7.6}Tables}{18}{subsection.1.7.6}%
+\contentsline {xpart}{Introduction}{3}{part.1}%
+\contentsline {part}{\partnumberline {II}Content}{19}{part.2}%
+\contentsline {chapter}{\chapternumberline {2}Front Matter}{22}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Title Page}{22}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Dedication}{22}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Bibliographic Data}{23}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Statistics}{23}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Thesis Publication}{23}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Abstract}{23}{section.2.4}%
+\contentsline {section}{\numberline {2.5}German Abstract}{24}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Acknowledgments}{24}{section.2.6}%
+\contentsline {section}{\numberline {2.7}The Table of Contents}{24}{section.2.7}%
+\contentsline {xpart}{Content}{21}{part.2}%
+\contentsline {chapter}{\chapternumberline {3}Main Matter}{26}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Parts}{26}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Chapters}{26}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Mini TOC}{26}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Labels and References}{26}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Citations}{27}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Margin Notes}{28}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Definition Index}{28}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Abbreviations}{28}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Symbols}{30}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Ordering and Categories}{31}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Symbols with Parameters}{31}{subsection.3.8.2}%
+\contentsline {section}{\numberline {3.9}Floats}{32}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Figures}{32}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}Captions}{32}{subsection.3.9.2}%
+\contentsline {section}{\numberline {3.10}Code}{33}{section.3.10}%
+\contentsline {subsection}{\numberline {3.10.1}Pseudo Code}{33}{subsection.3.10.1}%
+\contentsline {subsection}{\numberline {3.10.2}Real Code with Highlighting}{34}{subsection.3.10.2}%
+\contentsline {section}{\numberline {3.11}Math Environments}{35}{section.3.11}%
+\contentsline {subsection}{\numberline {3.11.1}Proposition}{35}{subsection.3.11.1}%
+\contentsline {subsection}{\numberline {3.11.2}Definition}{35}{subsection.3.11.2}%
+\contentsline {subsection}{\numberline {3.11.3}Corollary}{35}{subsection.3.11.3}%
+\contentsline {subsection}{\numberline {3.11.4}Theorem}{35}{subsection.3.11.4}%
+\contentsline {subsection}{\numberline {3.11.5}Lemma}{35}{subsection.3.11.5}%
+\contentsline {subsection}{\numberline {3.11.6}Proof}{36}{subsection.3.11.6}%
+\contentsline {section}{\numberline {3.12}Todo Notes}{36}{section.3.12}%
+\contentsline {chapter}{\chapternumberline {4}Back Matter}{38}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Appendix}{38}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Lists of X}{38}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Bibliography}{38}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}BibTex}{39}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Author Style}{39}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}BibLaTeX Annotations}{39}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Curriculum Scientiae}{41}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Selbstständigkeitserklärung (Statement of Authorship)}{41}{section.4.5}%
+\contentsline {part}{Appendices}{42}{section.4.5}%
+\partbegin 
+\contentsline {appendix}{\chapternumberline {A}Class Options Overview}{45}{appendix.A}%
+\contentsline {appendix}{\chapternumberline {B}LaTeX Commands in the Class}{47}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Preamble Commands}{47}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Commands}{48}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Environments}{49}{section.B.3}%
+\contentsline {appendix}{\chapternumberline {C}Version History}{51}{appendix.C}%
+\contentsline {chapter}{List of Abbreviations}{53}{section*.34}%
+\contentsline {chapter}{Definition Index}{55}{section*.36}%
+\contentsline {chapter}{Bibliography}{57}{section*.39}%
+\contentsline {chapter}{Curriculum Scientiae}{59}{appendix*.40}%
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
